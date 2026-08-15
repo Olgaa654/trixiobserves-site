@@ -1,10 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <title>Trixi Observes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrixiObserves</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #050816;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Светящиеся элементы на фоне */
+        .glow-green {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: #39ff88;
+            opacity: 0.12;
+            filter: blur(100px);
+            border-radius: 50%;
+            top: 10%;
+            left: 5%;
+        }
+
+        .glow-purple {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: #a855f7;
+            opacity: 0.15;
+            filter: blur(110px);
+            border-radius: 50%;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        /* Главный экран */
+        .hero {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 30px;
+        }
+
+        .small-title {
+            color: #39ff88;
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 80px);
+            margin: 0;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #c084fc,
+                #39ff88
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            max-width: 650px;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #b8bfd6;
+            margin-top: 25px;
+        }
+
+        /* Кнопка */
+        .explore-button {
+            margin-top: 35px;
+            padding: 16px 32px;
+
+            border: 2px solid #a855f7;
+            border-radius: 40px;
+
+            background: linear-gradient(
+                135deg,
+                #7c3aed,
+                #a855f7
+            );
+
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.3s;
+
+            box-shadow:
+                0 0 20px rgba(168, 85, 247, 0.4);
+        }
+
+        .explore-button:hover {
+            transform: translateY(-4px) scale(1.03);
+
+            box-shadow:
+                0 0 35px rgba(57, 255, 136, 0.5);
+        }
+
+        /* Декоративные точки */
+        .dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #39ff88;
+            box-shadow: 0 0 15px #39ff88;
+        }
+
+        .dot1 {
+            top: 20%;
+            right: 15%;
+        }
+
+        .dot2 {
+            bottom: 20%;
+            left: 15%;
+            background: #a855f7;
+            box-shadow: 0 0 15px #a855f7;
+        }
+
+        .dot3 {
+            top: 35%;
+            left: 10%;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Trixi Observes</h1>
-  <p>Coming Soon</p>
+
+    <div class="glow-green"></div>
+    <div class="glow-purple"></div>
+
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+
+    <main class="hero">
+
+        <div class="small-title">
+            TrixiObserves
+        </div>
+
+        <h1>
+            Добро пожаловать<br>
+            в мир TrixiObserves!
+        </h1>
+
+        <p class="description">
+            Открой новый мир наблюдений, открытий
+            и удивительных историй вместе с Trixi.
+        </p>
+
+        <button class="explore-button" onclick="startExploring()">
+            Начать исследовать мир Trixi ✦
+        </button>
+
+    </main>
+
+    <script>
+        function startExploring() {
+            alert("Добро пожаловать в мир Trixi! 💜💚");
+        }
+    </script>
+
 </body>
 </html>
