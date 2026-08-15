@@ -75,7 +75,7 @@ const translations = {
         /* Главная страница */
 
         welcome:
-            "Willkommen",
+            "Herzlich willkommen",
 
         inWorld:
             "in der Welt von",
@@ -87,7 +87,7 @@ const translations = {
             "Finde in ihnen Antworten und deinen Weg zu dir selbst.",
 
         startJourney:
-            "Reise beginnen ✦",
+            "Auf die Reise gehen ✦",
 
 
         /* Страница мира */
