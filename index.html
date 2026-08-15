@@ -1,36 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>TrixiObserves — Мир забытых мифов</title>
 
-
-    <!-- Каллиграфические шрифты -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <!-- Рукописные шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet"
     >
 
-
     <style>
-
-        /* =========================
-           ОСНОВНЫЕ НАСТРОЙКИ
-        ========================= */
 
         * {
             box-sizing: border-box;
@@ -42,19 +27,18 @@
 
         body {
             margin: 0;
-
             min-height: 100vh;
 
             background:
                 radial-gradient(
-                    circle at 50% 35%,
-                    rgba(20, 70, 70, 0.18),
+                    circle at 10% 45%,
+                    rgba(35, 180, 125, 0.16),
                     transparent 30%
                 ),
                 radial-gradient(
-                    circle at 50% 85%,
-                    rgba(91, 35, 150, 0.20),
-                    transparent 40%
+                    circle at 90% 65%,
+                    rgba(145, 65, 220, 0.18),
+                    transparent 35%
                 ),
                 #050816;
 
@@ -65,63 +49,58 @@
 
 
         /* =========================
-           СВЕЧЕНИЯ НА ФОНЕ
+           СВЕЧЕНИЯ
         ========================= */
 
         .glow-green {
-
             position: fixed;
 
-            width: 350px;
-            height: 350px;
+            width: 380px;
+            height: 380px;
 
             background: #39ff88;
-
             opacity: 0.10;
 
-            filter: blur(110px);
+            filter: blur(120px);
 
             border-radius: 50%;
 
-            top: 8%;
-            left: 0;
+            top: 25%;
+            left: -100px;
 
             pointer-events: none;
         }
 
 
         .glow-purple {
-
             position: fixed;
 
-            width: 420px;
-            height: 420px;
+            width: 450px;
+            height: 450px;
 
             background: #a855f7;
+            opacity: 0.14;
 
-            opacity: 0.13;
-
-            filter: blur(120px);
+            filter: blur(130px);
 
             border-radius: 50%;
 
-            bottom: 0;
-            right: -50px;
+            bottom: -80px;
+            right: -80px;
 
             pointer-events: none;
         }
 
 
         /* =========================
-           ДЕКОРАТИВНЫЕ ТОЧКИ
+           МАГИЧЕСКИЕ ТОЧКИ
         ========================= */
 
-        .dot {
-
+        .star {
             position: fixed;
 
-            width: 9px;
-            height: 9px;
+            width: 7px;
+            height: 7px;
 
             border-radius: 50%;
 
@@ -129,43 +108,54 @@
 
             box-shadow:
                 0 0 10px #39ff88,
-                0 0 25px #39ff88;
-
-            z-index: 2;
+                0 0 22px #39ff88;
 
             animation:
                 floating 4s ease-in-out infinite;
+
+            z-index: 2;
         }
 
 
-        .dot1 {
-
-            top: 25%;
-            right: 12%;
+        .star1 {
+            top: 28%;
+            left: 10%;
         }
 
 
-        .dot2 {
-
-            bottom: 22%;
-            left: 12%;
+        .star2 {
+            top: 32%;
+            right: 10%;
 
             background: #a855f7;
 
             box-shadow:
                 0 0 10px #a855f7,
-                0 0 25px #a855f7;
+                0 0 22px #a855f7;
 
             animation-delay: 1s;
         }
 
 
-        .dot3 {
-
-            top: 42%;
-            left: 7%;
+        .star3 {
+            bottom: 22%;
+            left: 18%;
 
             animation-delay: 2s;
+        }
+
+
+        .star4 {
+            bottom: 25%;
+            right: 18%;
+
+            background: #e6b84a;
+
+            box-shadow:
+                0 0 10px #e6b84a,
+                0 0 22px #e6b84a;
+
+            animation-delay: 1.5s;
         }
 
 
@@ -187,7 +177,6 @@
         ========================= */
 
         .hero {
-
             position: relative;
 
             z-index: 3;
@@ -203,35 +192,20 @@
             text-align: center;
 
             padding:
-                70px
-                25px
-                90px;
+                55px
+                20px
+                70px;
         }
 
 
         /* =========================
-           ВЕРХНИЙ ЛОГОТИП
+           ЗАГОЛОВОК
         ========================= */
 
-        .logo-area {
+        h1 {
+            max-width: 1100px;
 
-            position: relative;
-
-            display: inline-flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            margin-bottom: 35px;
-
-            cursor: default;
-        }
-
-
-        .logo {
-
-            position: relative;
+            margin: 0;
 
             font-family:
                 "Allura",
@@ -240,44 +214,470 @@
             font-size:
                 clamp(
                     48px,
-                    9vw,
-                    86px
+                    8vw,
+                    92px
                 );
+
+            line-height: 1.05;
 
             font-weight: 400;
 
             font-style: italic;
 
-            letter-spacing: 2px;
-
-            color: #f4d77b;
+            color: #f3ca62;
 
             text-shadow:
 
-                0 0 4px
-                rgba(255, 255, 255, 0.35),
+                0 0 5px
+                rgba(255, 230, 140, 0.7),
 
-                0 0 12px
-                rgba(244, 215, 123, 0.45),
+                0 0 15px
+                rgba(244, 190, 65, 0.6),
 
-                0 0 28px
-                rgba(168, 85, 247, 0.25);
+                0 0 32px
+                rgba(168, 85, 247, 0.3);
 
-            transform: rotate(-2deg);
-
-            white-space: nowrap;
+            transform: rotate(-1deg);
         }
 
 
-        /* Декоративная линия */
+        /* Первая строка */
 
-        .logo-decoration {
+        .welcome {
+            display: block;
 
-            width: 250px;
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           TRIXIOBSERVES + МЫШКА
+        ========================= */
+
+        .world-name {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            position: relative;
+
+            padding-bottom: 14px;
+
+            /* Зелёно-сиреневый цвет */
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #39ff88 0%,
+                    #7ee7a8 28%,
+                    #c084fc 65%,
+                    #a855f7 100%
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            text-shadow:
+                0 0 12px rgba(57, 255, 136, 0.25),
+                0 0 18px rgba(168, 85, 247, 0.25);
+        }
+
+
+        /* Светящаяся линия-подчёркивание */
+
+        .world-name::after {
+            content: "";
+
+            position: absolute;
+
+            left: 2%;
+            right: 2%;
+
+            bottom: 0;
+
+            height: 3px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #39ff88,
+                    #b8ffca,
+                    #c084fc,
+                    #a855f7,
+                    transparent
+                );
+
+            box-shadow:
+                0 0 8px #39ff88,
+                0 0 15px #a855f7;
+        }
+
+
+        /* =========================
+           МАЛЕНЬКАЯ МЫШКА
+        ========================= */
+
+        .bat {
+            position: relative;
+
+            width: 82px;
+            height: 55px;
+
+            flex-shrink: 0;
+
+            margin-left: 4px;
+
+            margin-bottom: -2px;
+
+            transform:
+                translateY(2px);
+
+            filter:
+                drop-shadow(
+                    0 0 8px
+                    rgba(168, 85, 247, 0.7)
+                );
+
+            animation:
+                littleBat 3s ease-in-out infinite;
+        }
+
+
+        @keyframes littleBat {
+
+            0%,
+            100% {
+                transform:
+                    translateY(2px)
+                    rotate(-2deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-5px)
+                    rotate(2deg);
+            }
+        }
+
+
+        /* =========================
+           КРЫЛЬЯ
+        ========================= */
+
+        .wing {
+            position: absolute;
+
+            top: 14px;
+
+            width: 44px;
+            height: 34px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #241332,
+                    #55257b,
+                    #241536
+                );
+
+            border: 1px solid #9d5bd0;
+
+            clip-path:
+                polygon(
+                    100% 45%,
+                    72% 8%,
+                    58% 32%,
+                    38% 0,
+                    42% 43%,
+                    8% 18%,
+                    23% 63%,
+                    0 52%,
+                    25% 86%,
+                    55% 100%,
+                    100% 74%
+                );
+        }
+
+
+        .wing-left {
+            left: 0;
+
+            transform-origin: right center;
+
+            animation:
+                flapLeft 1.8s ease-in-out infinite;
+        }
+
+
+        .wing-right {
+            right: 0;
+
+            transform:
+                scaleX(-1);
+
+            transform-origin: left center;
+
+            animation:
+                flapRight 1.8s ease-in-out infinite;
+        }
+
+
+        @keyframes flapLeft {
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(8deg);
+            }
+        }
+
+
+        @keyframes flapRight {
+
+            0%,
+            100% {
+                transform:
+                    scaleX(-1)
+                    rotate(0);
+            }
+
+            50% {
+                transform:
+                    scaleX(-1)
+                    rotate(8deg);
+            }
+        }
+
+
+        /* =========================
+           ТЕЛО МЫШКИ
+        ========================= */
+
+        .bat-body {
+            position: absolute;
+
+            width: 32px;
+            height: 38px;
+
+            left: 25px;
+            top: 17px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 30%,
+                    #4b3654,
+                    #171222 75%
+                );
+
+            border-radius:
+                48% 48% 43% 43%;
+
+            z-index: 3;
+        }
+
+
+        /* =========================
+           ГОЛОВА
+        ========================= */
+
+        .bat-head {
+            position: absolute;
+
+            width: 42px;
+            height: 36px;
+
+            left: 20px;
+            top: 8px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 45%,
+                    #4b3654,
+                    #171222 75%
+                );
+
+            border-radius:
+                48% 48% 45% 45%;
+
+            z-index: 5;
+        }
+
+
+        /* =========================
+           УШИ
+        ========================= */
+
+        .ear {
+            position: absolute;
+
+            width: 16px;
+            height: 22px;
+
+            top: -11px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #251632,
+                    #713b75
+                );
+
+            border: 1px solid #a855f7;
+
+            clip-path:
+                polygon(
+                    50% 0,
+                    100% 100%,
+                    50% 78%,
+                    0 100%
+                );
+        }
+
+
+        .ear-left {
+            left: 3px;
+
+            transform: rotate(-15deg);
+        }
+
+
+        .ear-right {
+            right: 3px;
+
+            transform: rotate(15deg);
+        }
+
+
+        /* =========================
+           ГЛАЗА
+        ========================= */
+
+        .eye {
+            position: absolute;
+
+            width: 11px;
+            height: 14px;
+
+            top: 13px;
+
+            border-radius: 50%;
+
+            border: 1px solid #16101d;
+
+            z-index: 8;
+
+            /* Голубо-карий цвет */
+
+            background:
+                radial-gradient(
+                    circle at 45% 45%,
+                    #d7f5ff 0%,
+                    #78c8e8 35%,
+                    #6c8b9b 52%,
+                    #76542d 75%,
+                    #39220e 100%
+                );
+
+            box-shadow:
+                0 0 6px
+                rgba(130, 210, 255, 0.8);
+        }
+
+
+        .eye-left {
+            left: 6px;
+        }
+
+
+        .eye-right {
+            right: 6px;
+        }
+
+
+        /* Зрачок */
+
+        .eye::after {
+            content: "";
+
+            position: absolute;
+
+            width: 3px;
+            height: 9px;
+
+            background: #20130d;
+
+            border-radius: 50%;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+        }
+
+
+        /* Блик */
+
+        .eye::before {
+            content: "";
+
+            position: absolute;
+
+            width: 3px;
+            height: 3px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            left: 2px;
+            top: 2px;
+        }
+
+
+        /* Нос */
+
+        .nose {
+            position: absolute;
+
+            width: 6px;
+            height: 4px;
+
+            background: #120b18;
+
+            border-radius: 50%;
+
+            left: 50%;
+            top: 25px;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        /* =========================
+           ДЕКОРАТИВНАЯ ЛИНИЯ
+        ========================= */
+
+        .decoration {
+
+            width: 280px;
 
             height: 2px;
 
-            margin-top: 2px;
+            margin-top: 35px;
 
             background:
                 linear-gradient(
@@ -292,328 +692,33 @@
             box-shadow:
                 0 0 10px
                 rgba(244, 215, 123, 0.5);
+
+            position: relative;
         }
 
 
-        .logo-decoration::before,
-        .logo-decoration::after {
+        .decoration::before,
+        .decoration::after {
 
             content: "✦";
 
             position: absolute;
 
+            top: -13px;
+
             color: #c084fc;
 
-            font-size: 14px;
+            font-size: 18px;
         }
 
 
-        .logo-decoration::before {
-
-            transform:
-                translateX(-145px)
-                translateY(-9px);
+        .decoration::before {
+            left: -5px;
         }
 
 
-        .logo-decoration::after {
-
-            transform:
-                translateX(130px)
-                translateY(-9px);
-        }
-
-
-        /* =========================
-           ЛЕТУЧАЯ МЫШЬ
-        ========================= */
-
-        .bat {
-
-            position: absolute;
-
-            width: 62px;
-            height: 42px;
-
-            right: -75px;
-            top: -18px;
-
-            transition:
-                transform 0.4s ease,
-                filter 0.4s ease;
-
-            filter:
-                drop-shadow(
-                    0 0 8px
-                    rgba(168, 85, 247, 0.7)
-                );
-        }
-
-
-        .bat:hover {
-
-            transform:
-                scale(1.15)
-                rotate(-5deg);
-
-            filter:
-                drop-shadow(
-                    0 0 15px
-                    #a855f7
-                );
-        }
-
-
-        .bat-body {
-
-            position: absolute;
-
-            width: 13px;
-            height: 20px;
-
-            background: #191326;
-
-            border-radius:
-                50% 50% 45% 45%;
-
-            left: 25px;
-            top: 10px;
-        }
-
-
-        .bat-head {
-
-            position: absolute;
-
-            width: 18px;
-            height: 18px;
-
-            background: #191326;
-
-            border-radius: 50%;
-
-            left: 22px;
-            top: 5px;
-        }
-
-
-        .bat-head::before,
-        .bat-head::after {
-
-            content: "";
-
-            position: absolute;
-
-            width: 8px;
-            height: 11px;
-
-            background: #191326;
-
-            top: -6px;
-        }
-
-
-        .bat-head::before {
-
-            left: 0;
-
-            clip-path:
-                polygon(
-                    0 100%,
-                    40% 0,
-                    100% 100%
-                );
-        }
-
-
-        .bat-head::after {
-
-            right: 0;
-
-            clip-path:
-                polygon(
-                    0 100%,
-                    60% 0,
-                    100% 100%
-                );
-        }
-
-
-        .wing-left {
-
-            position: absolute;
-
-            width: 34px;
-            height: 30px;
-
-            left: -2px;
-            top: 7px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #191326,
-                    #31184c
-                );
-
-            clip-path:
-                polygon(
-                    100% 40%,
-                    65% 10%,
-                    55% 30%,
-                    30% 5%,
-                    35% 45%,
-                    0 30%,
-                    20% 75%,
-                    50% 100%,
-                    100% 70%
-                );
-
-            transform-origin: right center;
-
-            animation:
-                wingLeft 1.8s ease-in-out infinite;
-        }
-
-
-        .wing-right {
-
-            position: absolute;
-
-            width: 34px;
-            height: 30px;
-
-            right: -2px;
-            top: 7px;
-
-            background:
-                linear-gradient(
-                    225deg,
-                    #191326,
-                    #31184c
-                );
-
-            clip-path:
-                polygon(
-                    0 40%,
-                    35% 10%,
-                    45% 30%,
-                    70% 5%,
-                    65% 45%,
-                    100% 30%,
-                    80% 75%,
-                    50% 100%,
-                    0 70%
-                );
-
-            transform-origin: left center;
-
-            animation:
-                wingRight 1.8s ease-in-out infinite;
-        }
-
-
-        @keyframes wingLeft {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(10deg);
-            }
-        }
-
-
-        @keyframes wingRight {
-
-            0%,
-            100% {
-                transform: rotate(0deg);
-            }
-
-            50% {
-                transform: rotate(-10deg);
-            }
-        }
-
-
-        /* =========================
-           ГЛАВНЫЙ ЗАГОЛОВОК
-        ========================= */
-
-        h1 {
-
-            max-width: 900px;
-
-            margin: 15px 0 0;
-
-            font-family:
-                "Allura",
-                cursive;
-
-            font-size:
-                clamp(
-                    55px,
-                    9vw,
-                    100px
-                );
-
-            line-height: 0.95;
-
-            font-weight: 400;
-
-            font-style: italic;
-
-            color: #f1c85c;
-
-            text-shadow:
-
-                0 0 5px
-                rgba(255, 230, 140, 0.6),
-
-                0 0 15px
-                rgba(244, 190, 65, 0.55),
-
-                0 0 35px
-                rgba(168, 85, 247, 0.25);
-
-            transform: rotate(-1deg);
-        }
-
-
-        .world {
-
-            display: block;
-
-            font-size:
-                clamp(
-                    70px,
-                    11vw,
-                    120px
-                );
-
-            margin-bottom: 5px;
-        }
-
-
-        .world-name {
-
-            display: inline-block;
-
-            color: #f5cf65;
-
-            text-shadow:
-
-                0 0 5px #ffe9a6,
-
-                0 0 15px #eab94e,
-
-                0 0 30px
-                rgba(124, 58, 237, 0.5);
-
-            position: relative;
+        .decoration::after {
+            right: -5px;
         }
 
 
@@ -623,10 +728,10 @@
 
         .description {
 
-            max-width: 700px;
+            max-width: 720px;
 
             margin:
-                65px
+                38px
                 auto
                 0;
 
@@ -636,9 +741,9 @@
 
             font-size:
                 clamp(
-                    28px,
-                    5vw,
-                    48px
+                    26px,
+                    4vw,
+                    42px
                 );
 
             line-height: 1.25;
@@ -663,12 +768,10 @@
 
         .explore-button {
 
-            /* Кнопка немного ниже */
-
-            margin-top: 70px;
+            margin-top: 45px;
 
             padding:
-                18px
+                17px
                 50px;
 
             min-width: 330px;
@@ -680,11 +783,10 @@
             border-radius: 50px;
 
             background:
-
                 linear-gradient(
                     135deg,
                     #35146d,
-                    #5220a0,
+                    #6328b5,
                     #25174d
                 );
 
@@ -697,10 +799,6 @@
             font-size: 32px;
 
             font-style: italic;
-
-            text-decoration: none;
-
-            display: inline-block;
 
             cursor: pointer;
 
@@ -716,6 +814,10 @@
 
                 inset 0 0 15px
                 rgba(168, 85, 247, 0.15);
+
+            text-shadow:
+                0 0 7px
+                rgba(245, 212, 119, 0.5);
         }
 
 
@@ -723,20 +825,18 @@
 
             transform:
                 translateY(-5px)
-                scale(1.03);
+                scale(1.04);
 
             border-color:
-                #f5d477;
-
-            color: #ffe59a;
+                #ffe49a;
 
             box-shadow:
 
-                0 0 20px
-                rgba(168, 85, 247, 0.7),
+                0 0 25px
+                rgba(168, 85, 247, 0.8),
 
                 0 0 45px
-                rgba(57, 255, 136, 0.2);
+                rgba(57, 255, 136, 0.25);
         }
 
 
@@ -749,186 +849,169 @@
 
 
         /* =========================
-           МОБИЛЬНАЯ ВЕРСИЯ
+           ТЕЛЕФОН
         ========================= */
 
         @media (max-width: 600px) {
 
             .hero {
-
                 padding:
-                    55px
-                    18px
-                    70px;
-            }
-
-
-            .logo {
-
-                font-size: 54px;
-            }
-
-
-            .logo-decoration {
-
-                width: 190px;
-            }
-
-
-            .logo-decoration::before {
-
-                transform:
-                    translateX(-110px)
-                    translateY(-9px);
-            }
-
-
-            .logo-decoration::after {
-
-                transform:
-                    translateX(95px)
-                    translateY(-9px);
-            }
-
-
-            .bat {
-
-                width: 48px;
-
-                height: 34px;
-
-                right: -55px;
-
-                top: -10px;
+                    40px
+                    15px
+                    50px;
             }
 
 
             h1 {
-
-                font-size: 64px;
-
-                line-height: 0.95;
+                font-size: 52px;
             }
 
 
-            .world {
+            .world-name {
+                gap: 5px;
+            }
 
-                font-size: 78px;
+
+            .bat {
+                width: 62px;
+                height: 45px;
+            }
+
+
+            .wing {
+                width: 34px;
+                height: 28px;
+            }
+
+
+            .bat-body {
+                width: 26px;
+                height: 31px;
+
+                left: 18px;
+                top: 14px;
+            }
+
+
+            .bat-head {
+                width: 34px;
+                height: 30px;
+
+                left: 14px;
+                top: 7px;
+            }
+
+
+            .eye {
+                width: 9px;
+                height: 11px;
+
+                top: 11px;
+            }
+
+
+            .eye-left {
+                left: 5px;
+            }
+
+
+            .eye-right {
+                right: 5px;
             }
 
 
             .description {
-
-                margin-top: 55px;
-
-                font-size: 34px;
-
-                padding: 0 10px;
+                font-size: 31px;
             }
 
 
             .explore-button {
-
                 min-width: 0;
 
                 width: 90%;
 
-                padding:
-                    17px
-                    20px;
-
-                font-size: 30px;
-
-                margin-top: 55px;
-            }
-
-
-            .dot1 {
-                right: 10%;
-            }
-
-
-            .dot2 {
-                left: 8%;
+                font-size: 29px;
             }
 
         }
 
     </style>
-
 </head>
 
 
 <body>
 
-
     <!-- Светящиеся пятна -->
 
     <div class="glow-green"></div>
-
     <div class="glow-purple"></div>
 
 
     <!-- Магические огоньки -->
 
-    <div class="dot dot1"></div>
-
-    <div class="dot dot2"></div>
-
-    <div class="dot dot3"></div>
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
 
 
     <main class="hero">
 
 
         <!-- =====================
-             ВЕРХНИЙ ЛОГОТИП
-        ====================== -->
-
-        <div class="logo-area">
-
-            <div class="logo">
-
-                TrixiObserves
-
-
-                <!-- Летучая мышь -->
-
-                <div class="bat">
-
-                    <div class="wing-left"></div>
-
-                    <div class="wing-right"></div>
-
-                    <div class="bat-body"></div>
-
-                    <div class="bat-head"></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="logo-decoration"></div>
-
-        </div>
-
-
-        <!-- =====================
-             ГЛАВНЫЙ ТЕКСТ
+             ПРИВЕТСТВИЕ
         ====================== -->
 
         <h1>
 
-            <span class="world">
-                Мир
+            <span class="welcome">
+                Добро Пожаловать
             </span>
 
+
+            <span>
+                в мир
+            </span>
+
+
             <span class="world-name">
+
                 TrixiObserves!
+
+                <!-- Маленькая мышка -->
+
+                <span class="bat">
+
+                    <span class="wing wing-left"></span>
+
+                    <span class="wing wing-right"></span>
+
+                    <span class="bat-body"></span>
+
+                    <span class="bat-head">
+
+                        <span class="ear ear-left"></span>
+
+                        <span class="ear ear-right"></span>
+
+                        <span class="eye eye-left"></span>
+
+                        <span class="eye eye-right"></span>
+
+                        <span class="nose"></span>
+
+                    </span>
+
+                </span>
+
             </span>
 
         </h1>
+
+
+        <!-- Декоративная линия -->
+
+        <div class="decoration"></div>
 
 
         <!-- =====================
@@ -939,9 +1022,7 @@
 
             Исследуй забытые мифы.<br>
 
-            Найди в них ответы и<br>
-
-            путь к себе.
+            Найди в них ответы и путь к себе.
 
         </p>
 
@@ -950,18 +1031,28 @@
              КНОПКА
         ====================== -->
 
-        <a
-            href="explore.html"
+        <button
             class="explore-button"
+            onclick="startExploring()"
         >
 
             Начать путешествие ✦
 
-        </a>
+        </button>
 
 
     </main>
 
-</body>
 
+    <script>
+
+        function startExploring() {
+
+            window.location.href = "explore.html";
+
+        }
+
+    </script>
+
+</body>
 </html>
