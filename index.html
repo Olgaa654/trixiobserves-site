@@ -1,702 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TrixiObserves — Мир забытых мифов</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <!-- Рукописные шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>TrixiObserves</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-
-            background:
-                radial-gradient(
-                    circle at 15% 45%,
-                    rgba(0, 255, 150, 0.12),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 85% 55%,
-                    rgba(150, 50, 255, 0.15),
-                    transparent 35%
-                ),
-                #050816;
-
-            color: #f2c95c;
-
-            overflow: hidden;
-        }
-
-        /* =========================
-           СВЕЧЕНИЯ
-        ========================= */
-
-        .glow-green {
-            position: fixed;
-
-            width: 400px;
-            height: 400px;
-
-            left: -100px;
-            top: 15%;
-
-            background: #20ff91;
-
-            opacity: 0.10;
-
-            filter: blur(120px);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        .glow-purple {
-            position: fixed;
-
-            width: 450px;
-            height: 450px;
-
-            right: -100px;
-            bottom: 5%;
-
-            background: #9b4dff;
-
-            opacity: 0.14;
-
-            filter: blur(130px);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        /* =========================
-           ЗВЁЗДОЧКИ
-        ========================= */
-
-        .dot {
-            position: fixed;
-
-            width: 8px;
-            height: 8px;
-
-            border-radius: 50%;
-
-            background: #39ff88;
-
-            box-shadow:
-                0 0 10px #39ff88,
-                0 0 25px #39ff88;
-
-            animation: float 4s ease-in-out infinite;
-
-            z-index: 2;
-        }
-
-        .dot1 {
-            top: 25%;
-            right: 12%;
-        }
-
-        .dot2 {
-            bottom: 20%;
-            left: 10%;
-
-            background: #a855f7;
-
-            box-shadow:
-                0 0 10px #a855f7,
-                0 0 25px #a855f7;
-
-            animation-delay: 1s;
-        }
-
-        .dot3 {
-            top: 45%;
-            left: 7%;
-
-            animation-delay: 2s;
-        }
-
-        @keyframes float {
-
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* =========================
-           ГЛАВНЫЙ ЭКРАН
-        ========================= */
-
-        .hero {
-            position: relative;
-
-            z-index: 3;
-
-            min-height: 100vh;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            text-align: center;
-
-            padding:
-                35px
-                20px
-                30px;
-
-            overflow: hidden;
-        }
-
-        /* =========================
-           ГЛАВНАЯ ФРАЗА
-        ========================= */
-
-        h1 {
-            margin: 0;
-
-            max-width: 1100px;
-
-            font-family: "Allura", cursive;
-
-            font-size: clamp(
-                55px,
-                7vw,
-                92px
-            );
-
-            line-height: 0.95;
-
-            font-weight: 400;
-
-            font-style: italic;
-
-            color: #f1c85c;
-
-            text-shadow:
-                0 0 6px rgba(255, 225, 130, 0.65),
-                0 0 18px rgba(230, 180, 60, 0.5),
-                0 0 35px rgba(168, 85, 247, 0.2);
-
-            transform: rotate(-1deg);
-        }
-
-        /* =========================
-           TrixiObserves
-        ========================= */
-
-        .world-name {
-            display: inline-block;
-
-            margin-top: 8px;
-
-            font-family: "Allura", cursive;
-
-            font-size: clamp(
-                65px,
-                8vw,
-                105px
-            );
-
-            font-style: italic;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #35f59a,
-                    #7ee7d7,
-                    #a6b4ff,
-                    #bd65ff
-                );
-
-            -webkit-background-clip: text;
-            background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-
-            position: relative;
-
-            transform: rotate(-2deg);
-
-            text-shadow:
-                0 0 10px rgba(57, 255, 136, 0.2),
-                0 0 20px rgba(168, 85, 247, 0.2);
-        }
-
-        /* Подчёркивание */
-
-        .world-name::after {
-            content: "";
-
-            display: block;
-
-            width: 100%;
-
-            height: 3px;
-
-            margin-top: 3px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #39ff88,
-                    #8de6d1,
-                    #a855f7
-                );
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 8px #39ff88,
-                0 0 15px #a855f7;
-        }
-
-        /* =========================
-           МЫШКА
-        ========================= */
-
-        .bat {
-            display: inline-block;
-
-            position: relative;
-
-            width: 62px;
-            height: 48px;
-
-            margin-left: 12px;
-
-            vertical-align: middle;
-
-            transform: translateY(-8px);
-
-            filter:
-                drop-shadow(
-                    0 0 8px rgba(168, 85, 247, 0.7)
-                );
-        }
-
-        /* Тело */
-
-        .bat-body {
-            position: absolute;
-
-            width: 23px;
-            height: 30px;
-
-            left: 20px;
-            top: 14px;
-
-            background:
-                linear-gradient(
-                    180deg,
-                    #3b2a29,
-                    #17131b
-                );
-
-            border-radius:
-                48% 48% 45% 45%;
-        }
-
-        /* Голова */
-
-        .bat-head {
-            position: absolute;
-
-            width: 38px;
-            height: 34px;
-
-            left: 12px;
-            top: 5px;
-
-            background:
-                linear-gradient(
-                    180deg,
-                    #4a302d,
-                    #17131b
-                );
-
-            border-radius:
-                50% 50% 48% 48%;
-
-            z-index: 3;
-        }
-
-        /* Уши */
-
-        .bat-head::before,
-        .bat-head::after {
-            content: "";
-
-            position: absolute;
-
-            width: 15px;
-            height: 22px;
-
-            top: -13px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #3c2929,
-                    #17131b
-                );
-
-            clip-path:
-                polygon(
-                    50% 0,
-                    100% 100%,
-                    0 100%
-                );
-        }
-
-        .bat-head::before {
-            left: 2px;
-        }
-
-        .bat-head::after {
-            right: 2px;
-        }
-
-        /* Глаза */
-
-        .eye {
-            position: absolute;
-
-            width: 10px;
-            height: 14px;
-
-            top: 13px;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle at 45% 35%,
-                    #ffffff 0 12%,
-                    #76dfff 13% 45%,
-                    #8a7650 46% 70%,
-                    #15131b 71%
-                );
-
-            box-shadow:
-                0 0 7px rgba(80, 210, 255, 0.8);
-
-            z-index: 4;
-        }
-
-        .eye-left {
-            left: 8px;
-        }
-
-        .eye-right {
-            right: 8px;
-        }
-
-        /* Нос */
-
-        .bat-nose {
-            position: absolute;
-
-            width: 6px;
-            height: 5px;
-
-            background: #a46b65;
-
-            border-radius: 50%;
-
-            left: 16px;
-            top: 28px;
-
-            z-index: 5;
-        }
-
-        /* Крылья */
-
-        .wing-left,
-        .wing-right {
-            position: absolute;
-
-            width: 34px;
-            height: 34px;
-
-            top: 15px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #17131b,
-                    #382525,
-                    #241727
-                );
-
-            z-index: 1;
-        }
-
-        .wing-left {
-            left: -5px;
-
-            clip-path:
-                polygon(
-                    100% 45%,
-                    65% 10%,
-                    55% 32%,
-                    30% 5%,
-                    35% 48%,
-                    0 30%,
-                    18% 75%,
-                    50% 100%,
-                    100% 70%
-                );
-        }
-
-        .wing-right {
-            right: -5px;
-
-            clip-path:
-                polygon(
-                    0 45%,
-                    35% 10%,
-                    45% 32%,
-                    70% 5%,
-                    65% 48%,
-                    100% 30%,
-                    82% 75%,
-                    50% 100%,
-                    0 70%
-                );
-        }
-
-        /* =========================
-           РАЗДЕЛИТЕЛЬ
-        ========================= */
-
-        .divider {
-            width: 360px;
-
-            max-width: 75%;
-
-            height: 2px;
-
-            margin-top: 18px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #a855f7,
-                    #f5d477,
-                    #39ff88,
-                    transparent
-                );
-
-            box-shadow:
-                0 0 10px rgba(168, 85, 247, 0.5);
-        }
-
-        /* =========================
-           ОПИСАНИЕ
-        ========================= */
-
-        .description {
-            max-width: 720px;
-
-            margin:
-                25px
-                auto
-                0;
-
-            font-family:
-                "Cormorant Garamond",
-                serif;
-
-            font-size:
-                clamp(
-                    23px,
-                    3vw,
-                    34px
-                );
-
-            line-height: 1.25;
-
-            font-style: italic;
-
-            color: #eac35d;
-
-            transform: rotate(-1deg);
-
-            text-shadow:
-                0 0 7px rgba(244, 215, 123, 0.45);
-        }
-
-        /* =========================
-           КНОПКА
-        ========================= */
-
-        .explore-button {
-            display: inline-block;
-
-            margin-top: 32px;
-
-            padding:
-                14px
-                48px;
-
-            min-width: 300px;
-
-            border:
-                2px solid
-                #d9aa35;
-
-            border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #35146d,
-                    #5422a0,
-                    #28144f
-                );
-
-            color: #f5d477;
-
-            font-family:
-                "Allura",
-                cursive;
-
-            font-size: 31px;
-
-            font-style: italic;
-
-            text-decoration: none;
-
-            cursor: pointer;
-
-            box-shadow:
-                0 0 18px rgba(168, 85, 247, 0.45);
-
-            transition: 0.3s;
-
-            transform: rotate(-1deg);
-        }
-
-        .explore-button:hover {
-            transform:
-                rotate(-1deg)
-                translateY(-4px)
-                scale(1.03);
-
-            box-shadow:
-                0 0 30px rgba(168, 85, 247, 0.7);
-        }
-
-        /* =========================
-           МОБИЛЬНАЯ ВЕРСИЯ
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            body {
-                overflow-y: auto;
-            }
-
-            .hero {
-                min-height: 100vh;
-
-                padding:
-                    30px
-                    15px
-                    40px;
-            }
-
-            h1 {
-                font-size: 52px;
-            }
-
-            .world-name {
-                font-size: 62px;
-            }
-
-            .bat {
-                width: 45px;
-                height: 38px;
-
-                transform:
-                    scale(0.8)
-                    translateY(-5px);
-            }
-
-            .description {
-                font-size: 25px;
-
-                margin-top: 22px;
-            }
-
-            .explore-button {
-                width: 90%;
-
-                min-width: 0;
-
-                font-size: 28px;
-            }
-        }
-
-    </style>
 </head>
 
-<body>
+
+<body class="home-page">
+
+    <!-- =========================
+         ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ
+    ========================== -->
+
+    <div class="language-switcher">
+
+        <button
+            class="language-button active"
+            data-language="ru"
+            onclick="changeLanguage('ru')"
+            title="Русский"
+        >
+            🇷🇺
+        </button>
+
+        <button
+            class="language-button"
+            data-language="de"
+            onclick="changeLanguage('de')"
+            title="Deutsch"
+        >
+            🇩🇪
+        </button>
+
+        <button
+            class="language-button"
+            data-language="en"
+            onclick="changeLanguage('en')"
+            title="English"
+        >
+            🇬🇧
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         СВЕЧЕНИЯ
+    ========================== -->
 
     <div class="glow-green"></div>
+
     <div class="glow-purple"></div>
 
-    <div class="dot dot1"></div>
-    <div class="dot dot2"></div>
-    <div class="dot dot3"></div>
+
+    <!-- Магические точки -->
+
+    <div class="magic-dot dot-one"></div>
+
+    <div class="magic-dot dot-two"></div>
+
+    <div class="magic-dot dot-three"></div>
+
+
+    <!-- =========================
+         ГЛАВНЫЙ ЭКРАН
+    ========================== -->
 
     <main class="hero">
 
-        <h1>
-            Добро Пожаловать<br>
+        <h1 class="main-title">
 
-            в мир
+            <span
+                class="welcome-line"
+                data-i18n="welcome"
+            >
+                Добро Пожаловать
+            </span>
+
+
+            <span
+                class="in-world"
+                data-i18n="inWorld"
+            >
+                в мир
+            </span>
+
 
             <span class="world-name">
+
                 TrixiObserves
+
+                <!-- Мышка -->
 
                 <span class="bat">
 
-                    <span class="wing-left"></span>
-                    <span class="wing-right"></span>
+                    <span class="bat-wing bat-wing-left"></span>
+
+                    <span class="bat-wing bat-wing-right"></span>
 
                     <span class="bat-body"></span>
 
                     <span class="bat-head">
-                        <span class="eye eye-left"></span>
-                        <span class="eye eye-right"></span>
+
+                        <span class="bat-ear bat-ear-left"></span>
+
+                        <span class="bat-ear bat-ear-right"></span>
+
+                        <span class="bat-eye bat-eye-left"></span>
+
+                        <span class="bat-eye bat-eye-right"></span>
+
                         <span class="bat-nose"></span>
+
                     </span>
 
                 </span>
@@ -705,21 +134,50 @@
 
         </h1>
 
-        <div class="divider"></div>
 
-        <p class="description">
-            Исследуй забытые мифы.<br>
-            Найди в них ответы и путь к себе.
+        <!-- Разделительная линия -->
+
+        <div class="gold-divider"></div>
+
+
+        <!-- =========================
+             ОПИСАНИЕ
+        ========================== -->
+
+        <p class="home-description">
+
+            <span data-i18n="descriptionOne">
+                Исследуй забытые мифы.
+            </span>
+
+            <br>
+
+            <span data-i18n="descriptionTwo">
+                Найди в них ответы и путь к себе.
+            </span>
+
         </p>
+
+
+        <!-- =========================
+             КНОПКА
+        ========================== -->
 
         <a
             href="explore.html"
-            class="explore-button"
+            class="main-button"
+            data-i18n="startJourney"
         >
             Начать путешествие ✦
         </a>
 
     </main>
 
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
