@@ -1,25 +1,23 @@
 /* =====================================================
    TRIXIOBSERVES
-   ПЕРЕКЛЮЧЕНИЕ ЯЗЫКОВ
+   SCRIPT.JS
+   ЯЗЫКИ И ИНТЕРАКТИВНОСТЬ
 ===================================================== */
 
 
-/*
-    Все переводы сайта находятся здесь.
-
-    Чтобы добавить новый текст,
-    достаточно добавить ему одинаковый
-    ключ в ru, de и en.
-*/
-
+/* =====================================================
+   ПЕРЕВОДЫ
+===================================================== */
 
 const translations = {
 
-    /* =========================
-       РУССКИЙ
-    ========================= */
+    /* =================================================
+       🇷🇺 РУССКИЙ
+    ================================================= */
 
     ru: {
+
+        /* Главная страница */
 
         welcome:
             "Добро Пожаловать",
@@ -37,7 +35,7 @@ const translations = {
             "Начать путешествие ✦",
 
 
-        /* Explore */
+        /* Страница мира */
 
         world:
             "Мир",
@@ -64,15 +62,17 @@ const translations = {
             "«У каждой истории есть след. Нужно лишь знать, где искать.»",
 
         backHome:
-            "← На главную"
+            "← Назад к началу пути"
     },
 
 
-    /* =========================
-       НЕМЕЦКИЙ
-    ========================= */
+    /* =================================================
+       🇩🇪 НЕМЕЦКИЙ
+    ================================================= */
 
     de: {
+
+        /* Главная страница */
 
         welcome:
             "Willkommen",
@@ -90,7 +90,7 @@ const translations = {
             "Reise beginnen ✦",
 
 
-        /* Explore */
+        /* Страница мира */
 
         world:
             "Die Welt von",
@@ -117,15 +117,17 @@ const translations = {
             "„Jede Geschichte hinterlässt eine Spur. Man muss nur wissen, wo man suchen soll.“",
 
         backHome:
-            "← Zur Startseite"
+            "← Zurück zum Beginn der Reise"
     },
 
 
-    /* =========================
-       АНГЛИЙСКИЙ
-    ========================= */
+    /* =================================================
+       🇬🇧 АНГЛИЙСКИЙ
+    ================================================= */
 
     en: {
+
+        /* Главная страница */
 
         welcome:
             "Welcome",
@@ -143,7 +145,7 @@ const translations = {
             "Begin the journey ✦",
 
 
-        /* Explore */
+        /* Страница мира */
 
         world:
             "The World of",
@@ -170,28 +172,36 @@ const translations = {
             "“Every story leaves a trace. You only need to know where to look.”",
 
         backHome:
-            "← Back Home"
+            "← Back to the start of the journey"
     }
 
 };
 
 
 /* =====================================================
-   СМЕНА ЯЗЫКА
+   ФУНКЦИЯ СМЕНЫ ЯЗЫКА
 ===================================================== */
 
 function changeLanguage(language) {
 
     /*
-        Проверяем, существует ли такой язык.
+        Проверяем, существует ли выбранный язык.
     */
 
     if (!translations[language]) {
 
-        return;
+        console.log(
+            "Такого языка нет:",
+            language
+        );
 
+        return;
     }
 
+
+    /*
+        Получаем переводы выбранного языка.
+    */
 
     const currentTranslations =
         translations[language];
@@ -209,7 +219,7 @@ function changeLanguage(language) {
 
 
     /*
-        Меняем текст.
+        Меняем текст каждого элемента.
     */
 
     elements.forEach(
@@ -222,7 +232,7 @@ function changeLanguage(language) {
 
 
             if (
-                currentTranslations[key]
+                currentTranslations[key] !== undefined
             ) {
 
                 element.textContent =
@@ -235,7 +245,7 @@ function changeLanguage(language) {
 
 
     /*
-        Меняем активный флажок.
+        Убираем active со всех флажков.
     */
 
     const languageButtons =
@@ -255,6 +265,10 @@ function changeLanguage(language) {
     );
 
 
+    /*
+        Добавляем active выбранному флажку.
+    */
+
     const activeButton =
         document.querySelector(
             `[data-language="${language}"]`
@@ -271,7 +285,7 @@ function changeLanguage(language) {
 
 
     /*
-        Меняем язык HTML.
+        Меняем язык самого HTML-документа.
     */
 
     document.documentElement.lang =
@@ -279,12 +293,15 @@ function changeLanguage(language) {
 
 
     /*
-        Сохраняем выбранный язык.
+        Сохраняем язык в браузере.
 
-        Поэтому если человек выбрал
-        немецкий на первой странице,
-        а потом перешёл на explore.html,
-        там тоже будет немецкий.
+        Например:
+
+        человек выбрал 🇬🇧
+
+        затем перешёл на explore.html
+
+        и там автоматически останется 🇬🇧.
     */
 
     localStorage.setItem(
@@ -300,6 +317,11 @@ function changeLanguage(language) {
 
 function loadSavedLanguage() {
 
+    /*
+        Получаем язык,
+        который был выбран раньше.
+    */
+
     const savedLanguage =
         localStorage.getItem(
             "trixiLanguage"
@@ -307,7 +329,8 @@ function loadSavedLanguage() {
 
 
     /*
-        Если язык уже выбирали,
+        Если сохранённый язык существует
+        и у нас есть его перевод,
         используем его.
     */
 
@@ -323,8 +346,9 @@ function loadSavedLanguage() {
     }
 
     /*
-        Если язык ещё не выбирали,
-        используем русский.
+        Если пользователь ещё
+        ничего не выбирал,
+        ставим русский.
     */
 
     else {
@@ -335,11 +359,20 @@ function loadSavedLanguage() {
 }
 
 
+/* =====================================================
+   ЗАПУСК
+===================================================== */
+
 /*
-    Запускаем после загрузки страницы.
+    Ждём, пока HTML полностью загрузится,
+    и затем устанавливаем язык.
 */
 
 document.addEventListener(
     "DOMContentLoaded",
-    loadSavedLanguage
+    function() {
+
+        loadSavedLanguage();
+
+    }
 );
