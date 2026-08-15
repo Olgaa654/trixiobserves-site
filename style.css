@@ -1,0 +1,1199 @@
+/* =====================================================
+   TRIXIOBSERVES
+   ОСНОВНЫЕ СТИЛИ
+===================================================== */
+
+
+/* =========================
+   БАЗА
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 15% 45%,
+            rgba(0, 255, 150, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 55%,
+            rgba(150, 50, 255, 0.16),
+            transparent 35%
+        ),
+
+        #050816;
+
+    color: #f2c95c;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   ФОНОВЫЕ СВЕЧЕНИЯ
+========================= */
+
+.glow-green {
+
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    left: -120px;
+    top: 15%;
+
+    background: #20ff91;
+
+    opacity: 0.09;
+
+    filter: blur(120px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.glow-purple {
+
+    position: fixed;
+
+    width: 470px;
+    height: 470px;
+
+    right: -120px;
+    bottom: 0;
+
+    background: #9b4dff;
+
+    opacity: 0.14;
+
+    filter: blur(130px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   ЯЗЫКИ
+========================= */
+
+.language-switcher {
+
+    position: fixed;
+
+    top: 20px;
+    right: 25px;
+
+    display: flex;
+
+    gap: 8px;
+
+    z-index: 100;
+}
+
+
+.language-button {
+
+    width: 42px;
+    height: 34px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        rgba(245, 212, 119, 0.45);
+
+    border-radius: 10px;
+
+    background:
+        rgba(8, 7, 25, 0.78);
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.language-button:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #f5d477;
+
+    box-shadow:
+        0 0 15px
+        rgba(168, 85, 247, 0.5);
+}
+
+
+.language-button.active {
+
+    border-color: #f5d477;
+
+    background:
+        rgba(75, 40, 110, 0.55);
+
+    box-shadow:
+        0 0 12px
+        rgba(245, 212, 119, 0.55);
+}
+
+
+/* =========================
+   МАГИЧЕСКИЕ ТОЧКИ
+========================= */
+
+.magic-dot {
+
+    position: fixed;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #39ff88;
+
+    box-shadow:
+        0 0 10px #39ff88,
+        0 0 25px #39ff88;
+
+    animation:
+        floating 4s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+
+.dot-one {
+
+    top: 27%;
+    right: 12%;
+}
+
+
+.dot-two {
+
+    bottom: 20%;
+    left: 10%;
+
+    background: #a855f7;
+
+    box-shadow:
+        0 0 10px #a855f7,
+        0 0 25px #a855f7;
+
+    animation-delay: 1s;
+}
+
+
+.dot-three {
+
+    top: 47%;
+    left: 7%;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =====================================================
+   ГЛАВНАЯ СТРАНИЦА
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    z-index: 3;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        55px
+        20px
+        40px;
+}
+
+
+/* =========================
+   ГЛАВНЫЙ ЗАГОЛОВОК
+========================= */
+
+.main-title {
+
+    margin: 0;
+
+    max-width: 1100px;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            55px,
+            7vw,
+            92px
+        );
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #f1c85c;
+
+    transform:
+        rotate(-1deg);
+
+    text-shadow:
+
+        0 0 6px
+        rgba(255, 225, 130, 0.65),
+
+        0 0 18px
+        rgba(230, 180, 60, 0.5),
+
+        0 0 35px
+        rgba(168, 85, 247, 0.2);
+}
+
+
+.welcome-line {
+
+    display: block;
+}
+
+
+.in-world {
+
+    display: inline-block;
+
+    margin-right: 8px;
+}
+
+
+/* =========================
+   TRIXIOBSERVES
+========================= */
+
+.world-name {
+
+    display: inline-block;
+
+    position: relative;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-style: italic;
+
+    background:
+        linear-gradient(
+            90deg,
+            #35f59a,
+            #7ee7d7,
+            #a6b4ff,
+            #bd65ff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    transform:
+        rotate(-2deg);
+}
+
+
+.world-name::after {
+
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    height: 3px;
+
+    margin-top: 4px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #39ff88,
+            #8de6d1,
+            #a855f7
+        );
+
+    box-shadow:
+        0 0 8px #39ff88,
+        0 0 15px #a855f7;
+}
+
+
+/* =====================================================
+   ЛЕТУЧАЯ МЫШКА
+===================================================== */
+
+.bat {
+
+    display: inline-block;
+
+    position: relative;
+
+    width: 58px;
+    height: 45px;
+
+    margin-left: 10px;
+
+    vertical-align: middle;
+
+    transform:
+        translateY(-7px);
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(168, 85, 247, 0.7)
+        );
+
+    animation:
+        batFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes batFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(-7px)
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotate(2deg);
+    }
+}
+
+
+/* Тело */
+
+.bat-body {
+
+    position: absolute;
+
+    width: 22px;
+    height: 28px;
+
+    left: 18px;
+    top: 14px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4a302d,
+            #17131b
+        );
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+
+/* Голова */
+
+.bat-head {
+
+    position: absolute;
+
+    width: 36px;
+    height: 32px;
+
+    left: 11px;
+    top: 5px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4b322f,
+            #18131b
+        );
+
+    border-radius: 50%;
+
+    z-index: 4;
+}
+
+
+/* Уши */
+
+.bat-ear {
+
+    position: absolute;
+
+    width: 14px;
+    height: 21px;
+
+    top: -12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3c2929,
+            #17131b
+        );
+
+    clip-path:
+        polygon(
+            50% 0,
+            100% 100%,
+            0 100%
+        );
+
+    z-index: -1;
+}
+
+
+.bat-ear-left {
+
+    left: 2px;
+
+    transform:
+        rotate(-10deg);
+}
+
+
+.bat-ear-right {
+
+    right: 2px;
+
+    transform:
+        rotate(10deg);
+}
+
+
+/* Глаза */
+
+.bat-eye {
+
+    position: absolute;
+
+    width: 9px;
+    height: 13px;
+
+    top: 12px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 45% 30%,
+
+            #ffffff 0 10%,
+
+            #73dcff 11% 43%,
+
+            #927b55 44% 68%,
+
+            #14121a 69%
+        );
+
+    box-shadow:
+        0 0 7px
+        rgba(90, 220, 255, 0.8);
+
+    z-index: 5;
+}
+
+
+.bat-eye-left {
+
+    left: 7px;
+}
+
+
+.bat-eye-right {
+
+    right: 7px;
+}
+
+
+/* Нос */
+
+.bat-nose {
+
+    position: absolute;
+
+    width: 6px;
+    height: 5px;
+
+    left: 15px;
+    top: 26px;
+
+    border-radius: 50%;
+
+    background: #a76b62;
+
+    z-index: 6;
+}
+
+
+/* Крылья */
+
+.bat-wing {
+
+    position: absolute;
+
+    width: 34px;
+    height: 32px;
+
+    top: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17131b,
+            #432a28,
+            #251729
+        );
+
+    z-index: 1;
+}
+
+
+.bat-wing-left {
+
+    left: -5px;
+
+    clip-path:
+        polygon(
+            100% 45%,
+            65% 10%,
+            55% 32%,
+            30% 5%,
+            35% 48%,
+            0 30%,
+            18% 75%,
+            50% 100%,
+            100% 70%
+        );
+}
+
+
+.bat-wing-right {
+
+    right: -5px;
+
+    clip-path:
+        polygon(
+            0 45%,
+            35% 10%,
+            45% 32%,
+            70% 5%,
+            65% 48%,
+            100% 30%,
+            82% 75%,
+            50% 100%,
+            0 70%
+        );
+}
+
+
+/* =====================================================
+   РАЗДЕЛИТЕЛЬ
+===================================================== */
+
+.gold-divider {
+
+    width: 360px;
+
+    max-width: 75%;
+
+    height: 2px;
+
+    margin-top: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a855f7,
+            #f5d477,
+            #39ff88,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(168, 85, 247, 0.5);
+}
+
+
+/* =====================================================
+   ОПИСАНИЕ
+===================================================== */
+
+.home-description {
+
+    max-width: 750px;
+
+    margin:
+        25px
+        auto
+        0;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            28px,
+            3.8vw,
+            42px
+        );
+
+    line-height: 1.25;
+
+    font-style: italic;
+
+    color: #eac35d;
+
+    transform:
+        rotate(-1deg);
+
+    text-shadow:
+        0 0 7px
+        rgba(244, 215, 123, 0.45);
+}
+
+
+/* =====================================================
+   ГЛАВНАЯ КНОПКА
+===================================================== */
+
+.main-button {
+
+    display: inline-block;
+
+    margin-top: 32px;
+
+    padding:
+        14px
+        48px;
+
+    min-width: 300px;
+
+    border:
+        2px solid
+        #d9aa35;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #35146d,
+            #5422a0,
+            #28144f
+        );
+
+    color: #f5d477;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 31px;
+
+    font-style: italic;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 18px
+        rgba(168, 85, 247, 0.45);
+
+    transition: 0.3s;
+
+    transform:
+        rotate(-1deg);
+}
+
+
+.main-button:hover {
+
+    transform:
+        rotate(-1deg)
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 0 30px
+        rgba(168, 85, 247, 0.7);
+}
+
+
+/* =====================================================
+   СТРАНИЦА EXPLORE
+===================================================== */
+
+.explore-container {
+
+    position: relative;
+
+    z-index: 3;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        70px
+        20px
+        45px;
+}
+
+
+/* Заголовок */
+
+.page-title {
+
+    margin: 0;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            55px,
+            7vw,
+            90px
+        );
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #f0c85c;
+
+    font-style: italic;
+
+    transform:
+        rotate(-2deg);
+
+    text-shadow:
+        0 0 7px
+        rgba(255,225,130,0.6),
+
+        0 0 18px
+        rgba(230,180,60,0.45);
+}
+
+
+.page-title .world-name {
+
+    margin-left: 10px;
+}
+
+
+/* Вступление */
+
+.explore-intro {
+
+    max-width: 800px;
+
+    margin-top: 25px;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            25px,
+            3.2vw,
+            36px
+        );
+
+    line-height: 1.3;
+
+    font-style: italic;
+
+    color: #eac35d;
+
+    transform:
+        rotate(-1deg);
+}
+
+
+/* =====================================================
+   НАВИГАЦИЯ
+===================================================== */
+
+.world-navigation {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+
+    max-width: 1150px;
+
+    margin-top: 30px;
+}
+
+
+.world-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 62px;
+
+    padding:
+        10px
+        25px;
+
+    border:
+        1px solid
+        #d9aa35;
+
+    border-radius: 20px;
+
+    background:
+        rgba(12, 10, 35, 0.75);
+
+    color: #eac35d;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 26px;
+
+    font-style: italic;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 12px
+        rgba(168,85,247,0.18);
+
+    transition: 0.3s;
+
+    transform:
+        rotate(-1deg);
+}
+
+
+.world-button:hover {
+
+    transform:
+        rotate(-1deg)
+        translateY(-4px);
+
+    color: #ffe9a6;
+
+    border-color:
+        #f5d477;
+
+    box-shadow:
+        0 0 25px
+        rgba(168,85,247,0.45);
+}
+
+
+.cara-button {
+
+    margin-top: 18px;
+
+    min-width: 290px;
+}
+
+
+/* =====================================================
+   РАЗДЕЛИТЕЛЬ EXPLORE
+===================================================== */
+
+.explore-divider {
+
+    width: 220px;
+
+    height: 2px;
+
+    margin-top: 35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #a855f7,
+            #f5d477,
+            transparent
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(168,85,247,0.45);
+}
+
+
+/* Цитата */
+
+.world-quote {
+
+    max-width: 800px;
+
+    margin-top: 22px;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(
+            26px,
+            3vw,
+            36px
+        );
+
+    line-height: 1.3;
+
+    color: #dcb65b;
+
+    transform:
+        rotate(-1deg);
+}
+
+
+/* Назад */
+
+.back-button {
+
+    margin-top: 25px;
+
+    color: #b98ce8;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 25px;
+
+    font-style: italic;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.back-button:hover {
+
+    color: #f5d477;
+
+    text-shadow:
+        0 0 10px
+        rgba(245,212,119,0.6);
+}
+
+
+/* =====================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .language-switcher {
+
+        top: 12px;
+        right: 12px;
+    }
+
+
+    .language-button {
+
+        width: 38px;
+        height: 31px;
+
+        font-size: 19px;
+    }
+
+
+    .hero {
+
+        padding:
+            65px
+            15px
+            35px;
+    }
+
+
+    .main-title {
+
+        font-size: 50px;
+    }
+
+
+    .world-name {
+
+        font-size: 60px;
+    }
+
+
+    .bat {
+
+        transform:
+            scale(0.8)
+            translateY(-5px);
+    }
+
+
+    .home-description {
+
+        font-size: 29px;
+    }
+
+
+    .main-button {
+
+        width: 90%;
+
+        min-width: 0;
+
+        font-size: 29px;
+    }
+
+
+    .explore-container {
+
+        padding:
+            65px
+            15px
+            40px;
+    }
+
+
+    .page-title {
+
+        font-size: 55px;
+    }
+
+
+    .page-title .world-name {
+
+        display: block;
+
+        margin:
+            7px
+            0
+            0;
+    }
+
+
+    .explore-intro {
+
+        font-size: 28px;
+    }
+
+
+    .world-navigation {
+
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .world-button {
+
+        width: 92%;
+
+        font-size: 26px;
+    }
+
+
+    .cara-button {
+
+        width: 92%;
+    }
+
+}
