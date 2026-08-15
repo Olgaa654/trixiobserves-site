@@ -22,120 +22,176 @@
 
 <body class="home-page">
 
+
     <!-- =========================
          ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ
     ========================== -->
 
-<div class="language-switcher">
+    <div class="language-switcher">
 
-    <!-- 🇷🇺 Русский -->
-    <button
-        class="language-button"
-        data-language="ru"
-        onclick="changeLanguage('ru')"
-        title="Русский"
-        aria-label="Русский"
-    >
-        <svg viewBox="0 0 30 20" class="flag-image">
-            <rect width="30" height="6.67" fill="#ffffff"/>
-            <rect y="6.67" width="30" height="6.67" fill="#1f4fa3"/>
-            <rect y="13.34" width="30" height="6.66" fill="#d52b1e"/>
-        </svg>
-    </button>
+        <!-- 🇷🇺 Русский -->
 
-
-    <!-- 🇩🇪 Deutsch -->
-    <button
-        class="language-button"
-        data-language="de"
-        onclick="changeLanguage('de')"
-        title="Deutsch"
-        aria-label="Deutsch"
-    >
-        <svg viewBox="0 0 30 20" class="flag-image">
-            <rect width="30" height="6.67" fill="#111111"/>
-            <rect y="6.67" width="30" height="6.67" fill="#d71920"/>
-            <rect y="13.34" width="30" height="6.66" fill="#f4c542"/>
-        </svg>
-    </button>
-
-
-    <!-- 🇬🇧 English -->
-    <button
-        class="language-button"
-        data-language="en"
-        onclick="changeLanguage('en')"
-        title="English"
-        aria-label="English"
-    >
-        <svg
-            viewBox="0 0 60 40"
-            class="flag-image"
+        <button
+            class="language-button"
+            data-language="ru"
+            onclick="changeLanguage('ru')"
+            title="Русский"
+            aria-label="Русский"
         >
 
-            <!-- Синий фон -->
-            <rect
-                width="60"
-                height="40"
-                fill="#173b8f"
-            />
+            <svg
+                viewBox="0 0 30 20"
+                class="flag-image"
+            >
 
-            <!-- Белые диагонали -->
-            <path
-                d="M0 0 L7 0 L60 33 L60 40 L53 40 L0 7 Z"
-                fill="white"
-            />
+                <rect
+                    width="30"
+                    height="6.67"
+                    fill="#ffffff"
+                />
 
-            <path
-                d="M60 0 L53 0 L0 33 L0 40 L7 40 L60 7 Z"
-                fill="white"
-            />
+                <rect
+                    y="6.67"
+                    width="30"
+                    height="6.67"
+                    fill="#1f4fa3"
+                />
 
-            <!-- Красные диагонали -->
-            <path
-                d="M0 0 L3 0 L60 35 L60 40 L57 40 L0 5 Z"
-                fill="#c8102e"
-            />
+                <rect
+                    y="13.34"
+                    width="30"
+                    height="6.66"
+                    fill="#d52b1e"
+                />
 
-            <path
-                d="M60 0 L57 0 L0 35 L0 40 L3 40 L60 5 Z"
-                fill="#c8102e"
-            />
+            </svg>
 
-            <!-- Белый крест -->
-            <rect
-                x="25"
-                width="10"
-                height="40"
-                fill="white"
-            />
+        </button>
 
-            <rect
-                y="15"
-                width="60"
-                height="10"
-                fill="white"
-            />
 
-            <!-- Красный крест -->
-            <rect
-                x="27"
-                width="6"
-                height="40"
-                fill="#c8102e"
-            />
+        <!-- 🇩🇪 Deutsch -->
 
-            <rect
-                y="17"
-                width="60"
-                height="6"
-                fill="#c8102e"
-            />
+        <button
+            class="language-button"
+            data-language="de"
+            onclick="changeLanguage('de')"
+            title="Deutsch"
+            aria-label="Deutsch"
+        >
 
-        </svg>
-    </button>
+            <svg
+                viewBox="0 0 30 20"
+                class="flag-image"
+            >
 
-</div>
+                <rect
+                    width="30"
+                    height="6.67"
+                    fill="#111111"
+                />
+
+                <rect
+                    y="6.67"
+                    width="30"
+                    height="6.67"
+                    fill="#d71920"
+                />
+
+                <rect
+                    y="13.34"
+                    width="30"
+                    height="6.66"
+                    fill="#f4c542"
+                />
+
+            </svg>
+
+        </button>
+
+
+        <!-- 🇬🇧 English -->
+
+        <button
+            class="language-button"
+            data-language="en"
+            onclick="changeLanguage('en')"
+            title="English"
+            aria-label="English"
+        >
+
+            <svg
+                viewBox="0 0 60 40"
+                class="flag-image"
+            >
+
+                <rect
+                    width="60"
+                    height="40"
+                    fill="#173b8f"
+                />
+
+                <!-- Белые диагонали -->
+
+                <path
+                    d="M0 0 L7 0 L60 33 L60 40 L53 40 L0 7 Z"
+                    fill="white"
+                />
+
+                <path
+                    d="M60 0 L53 0 L0 33 L0 40 L7 40 L60 7 Z"
+                    fill="white"
+                />
+
+                <!-- Красные диагонали -->
+
+                <path
+                    d="M0 0 L3 0 L60 35 L60 40 L57 40 L0 5 Z"
+                    fill="#c8102e"
+                />
+
+                <path
+                    d="M60 0 L57 0 L0 35 L0 40 L3 40 L60 5 Z"
+                    fill="#c8102e"
+                />
+
+                <!-- Белый крест -->
+
+                <rect
+                    x="25"
+                    width="10"
+                    height="40"
+                    fill="white"
+                />
+
+                <rect
+                    y="15"
+                    width="60"
+                    height="10"
+                    fill="white"
+                />
+
+                <!-- Красный крест -->
+
+                <rect
+                    x="27"
+                    width="6"
+                    height="40"
+                    fill="#c8102e"
+                />
+
+                <rect
+                    y="17"
+                    width="60"
+                    height="6"
+                    fill="#c8102e"
+                />
+
+            </svg>
+
+        </button>
+
+    </div>
+
 
     <!-- =========================
          СВЕЧЕНИЯ
@@ -146,7 +202,9 @@
     <div class="glow-purple"></div>
 
 
-    <!-- Магические точки -->
+    <!-- =========================
+         МАГИЧЕСКИЕ ТОЧКИ
+    ========================== -->
 
     <div class="magic-dot dot-one"></div>
 
@@ -161,7 +219,11 @@
 
     <main class="hero">
 
+
         <h1 class="main-title">
+
+
+            <!-- Добро пожаловать -->
 
             <span
                 class="welcome-line"
@@ -171,6 +233,8 @@
             </span>
 
 
+            <!-- в мир -->
+
             <span
                 class="in-world"
                 data-i18n="inWorld"
@@ -179,31 +243,83 @@
             </span>
 
 
+            <!-- =========================
+                 TRIXIOBSERVES + МЫШКА
+            ========================== -->
+
             <span class="world-name">
 
-                TrixiObserves
+                <span class="world-name-text">
+                    TrixiObserves
+                </span>
 
-                <!-- Мышка -->
 
-                <span class="bat">
+                <!-- ЛЕТУЧАЯ МЫШКА -->
 
-                    <span class="bat-wing bat-wing-left"></span>
+                <span
+                    class="trixi-bat"
+                    aria-label="Trixi"
+                >
 
-                    <span class="bat-wing bat-wing-right"></span>
 
-                    <span class="bat-body"></span>
+                    <!-- УШКИ -->
 
-                    <span class="bat-head">
+                    <span class="bat-ears">
 
                         <span class="bat-ear bat-ear-left"></span>
 
                         <span class="bat-ear bat-ear-right"></span>
 
-                        <span class="bat-eye bat-eye-left"></span>
+                    </span>
 
-                        <span class="bat-eye bat-eye-right"></span>
+
+                    <!-- КРЫЛЬЯ -->
+
+                    <span class="bat-wings">
+
+                        <span
+                            class="bat-wing bat-wing-left"
+                        ></span>
+
+                        <span
+                            class="bat-wing bat-wing-right"
+                        ></span>
+
+                    </span>
+
+
+                    <!-- ГОЛОВА -->
+
+                    <span class="bat-head">
+
+
+                        <!-- ЛЕВЫЙ ГЛАЗ -->
+
+                        <span class="bat-eye bat-eye-left">
+
+                            <span class="bat-pupil"></span>
+
+                        </span>
+
+
+                        <!-- ПРАВЫЙ ГЛАЗ -->
+
+                        <span class="bat-eye bat-eye-right">
+
+                            <span class="bat-pupil"></span>
+
+                        </span>
+
+
+                        <!-- НОС -->
 
                         <span class="bat-nose"></span>
+
+
+                        <!-- ЗАКРЫТАЯ УЛЫБКА -->
+
+                        <span class="bat-smile"></span>
+
 
                     </span>
 
@@ -214,7 +330,9 @@
         </h1>
 
 
-        <!-- Разделительная линия -->
+        <!-- =========================
+             РАЗДЕЛИТЕЛЬ
+        ========================== -->
 
         <div class="gold-divider"></div>
 
@@ -250,12 +368,16 @@
             Начать путешествие ✦
         </a>
 
+
     </main>
 
 
-    <!-- JavaScript -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
 
     <script src="script.js"></script>
+
 
 </body>
 
