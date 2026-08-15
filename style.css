@@ -294,6 +294,8 @@ body {
 
     align-items: center;
 
+    gap: 22px;
+
     font-family: "Allura", cursive;
 
     font-style: italic;
@@ -353,21 +355,8 @@ body {
 
 
 /* =====================================================
-   МЫШКА
+   МЫШКА TRIXI
 ===================================================== */
-
-/* =====================================================
-   TRIXI — МИЛАЯ ЛЕТУЧАЯ МЫШКА
-===================================================== */
-
-.world-name {
-    display: inline-flex;
-    align-items: center;
-    gap: 22px; /* расстояние между TrixiObserves и мышкой */
-}
-
-
-/* сама мышка */
 
 .trixi-bat {
     position: relative;
@@ -392,6 +381,14 @@ body {
    КРЫЛЬЯ
 ===================================================== */
 
+.bat-wings {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
 .bat-wing {
     position: absolute;
 
@@ -411,7 +408,7 @@ body {
 }
 
 
-/* левое крыло */
+/* Левое крыло */
 
 .bat-wing-left {
     left: -5px;
@@ -432,7 +429,7 @@ body {
 }
 
 
-/* правое крыло */
+/* Правое крыло */
 
 .bat-wing-right {
     right: -5px;
@@ -484,8 +481,22 @@ body {
 
 
 /* =====================================================
-   УШКИ — БЛИЖЕ К ГОЛОВЕ
+   УШКИ
 ===================================================== */
+
+.bat-ears {
+    position: absolute;
+
+    left: 13px;
+    top: 8px;
+
+    width: 38px;
+    height: 34px;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
 
 .bat-ear {
     position: absolute;
@@ -510,11 +521,11 @@ body {
             0 100%
         );
 
-    z-index: -1;
+    z-index: 4;
 }
 
 
-/* левое ушко */
+/* Левое ушко */
 
 .bat-ear-left {
     left: 3px;
@@ -523,7 +534,7 @@ body {
 }
 
 
-/* правое ушко */
+/* Правое ушко */
 
 .bat-ear-right {
     right: 3px;
@@ -561,14 +572,14 @@ body {
 }
 
 
-/* левый глаз */
+/* Левый глаз */
 
 .bat-eye-left {
     left: 6px;
 }
 
 
-/* правый глаз */
+/* Правый глаз */
 
 .bat-eye-right {
     right: 6px;
@@ -664,25 +675,6 @@ body {
 }
 
 
-/* =====================================================
-   МОБИЛЬНАЯ ВЕРСИЯ
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .world-name {
-        gap: 12px;
-    }
-
-    .trixi-bat {
-        width: 48px;
-        height: 44px;
-
-        transform:
-            scale(0.8)
-            translateY(-5px);
-    }
-}
 /* =====================================================
    РАЗДЕЛИТЕЛЬ
 ===================================================== */
@@ -809,7 +801,7 @@ body {
 
     text-align: center;
 
-    padding: 25px 20px 15px;
+    padding: 30px 20px 20px;
 
     overflow: hidden;
 }
@@ -824,7 +816,7 @@ body {
 ===================================================== */
 
 .page-title {
-    margin: 0;
+    margin: 0 0 18px;
 
     font-family: "Allura", cursive;
 
@@ -857,13 +849,13 @@ body {
 .explore-intro {
     max-width: 700px;
 
-    margin: 12px auto 0;
+    margin: 0 auto 24px;
 
     font-family: "Allura", cursive;
 
     font-size: clamp(20px, 2.2vw, 27px);
 
-    line-height: 1.1;
+    line-height: 1.2;
 
     font-style: italic;
 
@@ -883,11 +875,11 @@ body {
 
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 14px 12px;
 
     max-width: 1100px;
 
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 .world-button {
@@ -938,7 +930,7 @@ body {
 }
 
 .cara-button {
-    margin-top: 3px;
+    margin-top: 4px;
 
     min-width: 260px;
 }
@@ -953,7 +945,8 @@ body {
 
     height: 2px;
 
-    margin-top: 12px;
+    margin-top: 24px;
+    margin-bottom: 18px;
 
     background:
         linear-gradient(
@@ -976,13 +969,13 @@ body {
 .world-quote {
     max-width: 700px;
 
-    margin: 8px auto 0;
+    margin: 0 auto 20px;
 
     font-family: "Allura", cursive;
 
     font-size: clamp(20px, 2.2vw, 27px);
 
-    line-height: 1.08;
+    line-height: 1.2;
 
     color: #dcb65b;
 
@@ -997,7 +990,7 @@ body {
 .back-home {
     display: inline-block;
 
-    margin-top: 8px;
+    margin-top: 0;
 
     padding: 7px 22px;
 
@@ -1071,15 +1064,16 @@ body {
 
     .page-title {
         font-size: 52px;
+        margin-bottom: 14px;
     }
 
     .explore-intro {
-        margin-top: 7px;
+        margin-bottom: 18px;
         font-size: 22px;
     }
 
     .world-navigation {
-        margin-top: 10px;
+        gap: 10px 10px;
     }
 
     .world-button {
@@ -1088,7 +1082,13 @@ body {
         font-size: 18px;
     }
 
+    .explore-divider {
+        margin-top: 18px;
+        margin-bottom: 14px;
+    }
+
     .world-quote {
+        margin-bottom: 16px;
         font-size: 21px;
     }
 
@@ -1122,7 +1122,9 @@ body {
     }
 
 
-    /* Главная */
+    /* =================================================
+       Главная
+    ================================================= */
 
     .hero {
         min-height: 100vh;
@@ -1140,9 +1142,14 @@ body {
 
     .world-name {
         display: inline-flex;
+
+        gap: 12px;
     }
 
     .trixi-bat {
+        width: 48px;
+        height: 44px;
+
         transform:
             scale(0.75)
             translateY(-5px);
@@ -1168,7 +1175,9 @@ body {
     }
 
 
-    /* Explore */
+    /* =================================================
+       Explore
+    ================================================= */
 
     .explore-page {
         overflow-y: auto;
@@ -1176,6 +1185,7 @@ body {
 
     .explore-container {
         height: auto;
+
         min-height: 100vh;
 
         padding:
@@ -1187,6 +1197,8 @@ body {
     .page-title {
         font-size: 44px;
         line-height: 0.95;
+
+        margin-bottom: 18px;
     }
 
     .page-title .world-name {
@@ -1199,7 +1211,8 @@ body {
     }
 
     .explore-intro {
-        margin-top: 14px;
+        margin-top: 0;
+        margin-bottom: 22px;
 
         font-size: 23px;
 
@@ -1211,9 +1224,9 @@ body {
 
         width: 100%;
 
-        margin-top: 18px;
+        margin-top: 0;
 
-        gap: 9px;
+        gap: 10px;
     }
 
     .world-button {
@@ -1229,19 +1242,23 @@ body {
     }
 
     .explore-divider {
-        margin-top: 18px;
+        margin-top: 22px;
+        margin-bottom: 16px;
     }
 
     .world-quote {
-        margin-top: 10px;
+        margin-top: 0;
+        margin-bottom: 18px;
 
         font-size: 22px;
+
+        line-height: 1.15;
     }
 
     .back-home {
         width: 92%;
 
-        margin-top: 10px;
+        margin-top: 0;
 
         font-size: 21px;
     }
