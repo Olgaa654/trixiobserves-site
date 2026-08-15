@@ -1313,118 +1313,361 @@ body {
    EXPLORE — КОМПАКТНЫЙ ЭКРАН
 ===================================================== */
 
+/* =====================================================
+   EXPLORE — ВСЯ СТРАНИЦА В ОДИН ЭКРАН
+===================================================== */
+
 .explore-page {
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 
 .explore-container {
+
     min-height: 100vh;
+    height: 100vh;
 
     padding:
-        45px
+        28px
         20px
-        25px;
+        18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 
     justify-content: flex-start;
 }
 
 
+/* =====================================================
+   ЗАГОЛОВОК
+===================================================== */
+
 .page-title {
+
+    margin: 0;
 
     font-size:
         clamp(
             48px,
-            6vw,
-            76px
+            5.5vw,
+            68px
         );
 
-    margin: 0;
+    line-height: 0.95;
 }
 
+
+.page-title .world-name {
+
+    margin-left: 8px;
+}
+
+
+/* =====================================================
+   ВСТУПЛЕНИЕ
+===================================================== */
 
 .explore-intro {
 
     max-width: 720px;
 
-    margin-top: 18px;
+    margin:
+        12px
+        auto
+        0;
 
     font-size:
         clamp(
-            23px,
-            2.7vw,
-            31px
+            21px,
+            2.3vw,
+            28px
         );
 
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 
+/* =====================================================
+   КНОПКИ
+===================================================== */
+
 .world-navigation {
 
-    gap: 12px;
+    max-width: 1100px;
 
-    margin-top: 22px;
+    margin-top: 18px;
 
-    max-width: 1150px;
+    gap: 9px;
 }
 
 
 .world-button {
 
-    min-height: 52px;
+    min-height: 46px;
 
     padding:
-        8px
-        22px;
+        7px
+        20px;
 
-    font-size: 23px;
+    font-size: 21px;
 
-    border-radius: 18px;
+    line-height: 1;
+
+    border-radius: 17px;
 }
 
 
 .cara-button {
 
-    margin-top: 8px;
+    margin-top: 5px;
 }
 
+
+/* =====================================================
+   РАЗДЕЛИТЕЛЬ
+===================================================== */
 
 .explore-divider {
 
-    margin-top: 20px;
+    width: 190px;
 
-    width: 200px;
+    height: 2px;
+
+    margin-top: 15px;
 }
 
+
+/* =====================================================
+   ЦИТАТА
+===================================================== */
 
 .world-quote {
 
-    margin-top: 14px;
+    max-width: 720px;
+
+    margin:
+        10px
+        auto
+        0;
 
     font-size:
         clamp(
-            22px,
-            2.5vw,
-            30px
+            20px,
+            2.2vw,
+            27px
         );
 
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
+
+/* =====================================================
+   КНОПКА НАЗАД
+===================================================== */
 
 .back-home {
 
-    margin-top: 14px;
+    margin-top: 9px;
 
     padding:
-        9px
-        26px;
+        8px
+        25px;
 
-    font-size: 24px;
+    font-size: 22px;
+
+    line-height: 1;
 }
 
 
+/* =====================================================
+   ЕСЛИ ЭКРАН НЕВЫСОКИЙ
+===================================================== */
+
+@media (max-height: 800px) and (min-width: 701px) {
+
+    .explore-container {
+
+        padding:
+            20px
+            15px
+            12px;
+    }
+
+
+    .page-title {
+
+        font-size: 55px;
+    }
+
+
+    .explore-intro {
+
+        margin-top: 8px;
+
+        font-size: 23px;
+
+        line-height: 1.1;
+    }
+
+
+    .world-navigation {
+
+        margin-top: 12px;
+
+        gap: 7px;
+    }
+
+
+    .world-button {
+
+        min-height: 42px;
+
+        padding:
+            6px
+            17px;
+
+        font-size: 19px;
+    }
+
+
+    .cara-button {
+
+        margin-top: 3px;
+    }
+
+
+    .explore-divider {
+
+        margin-top: 10px;
+    }
+
+
+    .world-quote {
+
+        margin-top: 7px;
+
+        font-size: 22px;
+
+        line-height: 1.05;
+    }
+
+
+    .back-home {
+
+        margin-top: 7px;
+
+        padding:
+            7px
+            22px;
+
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   ТЕЛЕФОН
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .explore-page {
+
+        overflow-y: auto;
+    }
+
+
+    .explore-container {
+
+        height: auto;
+
+        min-height: 100vh;
+
+        padding:
+            65px
+            15px
+            30px;
+    }
+
+
+    .page-title {
+
+        font-size: 48px;
+
+        line-height: 1;
+    }
+
+
+    .page-title .world-name {
+
+        display: block;
+
+        margin:
+            5px
+            0
+            0;
+    }
+
+
+    .explore-intro {
+
+        margin-top: 15px;
+
+        font-size: 25px;
+
+        line-height: 1.15;
+    }
+
+
+    .world-navigation {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin-top: 20px;
+
+        gap: 10px;
+    }
+
+
+    .world-button {
+
+        width: 92%;
+
+        min-height: 48px;
+
+        font-size: 23px;
+    }
+
+
+    .explore-divider {
+
+        margin-top: 20px;
+    }
+
+
+    .world-quote {
+
+        font-size: 24px;
+
+        margin-top: 12px;
+    }
+
+
+    .back-home {
+
+        width: 92%;
+
+        margin-top: 12px;
+
+        font-size: 23px;
+    }
+}
 /* =====================================================
    НЕБОЛЬШИЕ ЭКРАНЫ ПО ВЫСОТЕ
 ===================================================== */
