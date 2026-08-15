@@ -1002,16 +1002,20 @@ body {
 
     margin: 0;
 
-    padding: 8px 24px;
+    padding: 9px 28px;
 
     border: 1px solid #d9aa35;
 
     border-radius: 40px;
 
     background:
-        rgba(35, 20, 65, 0.55);
+        linear-gradient(
+            135deg,
+            #241044,
+            #3b1768
+        );
 
-    color: #eac35d;
+    color: #f5d477;
 
     font-family: "Allura", cursive;
 
@@ -1022,13 +1026,14 @@ body {
     text-decoration: none;
 
     box-shadow:
-        0 0 12px
-        rgba(168, 85, 247, 0.22);
+        0 0 10px rgba(168, 85, 247, 0.25),
+        inset 0 0 12px rgba(168, 85, 247, 0.15);
 
     transition: 0.3s;
 
     transform: rotate(-1deg);
 }
+
 
 .back-home:hover {
     transform:
@@ -1039,12 +1044,17 @@ body {
 
     border-color: #f5d477;
 
+    background:
+        linear-gradient(
+            135deg,
+            #32145a,
+            #54228a
+        );
+
     box-shadow:
-        0 0 18px
-        rgba(168, 85, 247, 0.55);
+        0 0 20px rgba(168, 85, 247, 0.55),
+        inset 0 0 15px rgba(168, 85, 247, 0.2);
 }
-
-
 /* =====================================================
    НЕВЫСОКИЙ ЭКРАН
 ===================================================== */
