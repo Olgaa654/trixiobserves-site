@@ -1,6 +1,6 @@
 /* =====================================================
    TRIXIOBSERVES
-   CLEAN STYLE.CSS
+   STYLE.CSS
 ===================================================== */
 
 
@@ -120,6 +120,7 @@ body {
     background: rgba(8, 7, 25, 0.9);
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -177,7 +178,8 @@ body {
         0 0 10px #39ff88,
         0 0 25px #39ff88;
 
-    animation: floating 4s ease-in-out infinite;
+    animation:
+        floating 4s ease-in-out infinite;
 
     z-index: 2;
 }
@@ -233,6 +235,7 @@ body {
     min-height: 100vh;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
@@ -260,6 +263,7 @@ body {
     line-height: 0.9;
 
     font-weight: 400;
+
     font-style: italic;
 
     color: #f1c85c;
@@ -310,6 +314,7 @@ body {
         );
 
     -webkit-background-clip: text;
+
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
@@ -323,7 +328,7 @@ body {
 
 
 /* =====================================================
-   ПОДЧЁРКИВАНИЕ
+   ПОДЧЁРКИВАНИЕ TRIXIOBSERVES
 ===================================================== */
 
 .world-name::after {
@@ -355,7 +360,7 @@ body {
 
 
 /* =====================================================
-   МЫШКА TRIXI
+   МЫШКА
 ===================================================== */
 
 .trixi-bat {
@@ -370,10 +375,14 @@ body {
 
     transform: translateY(-7px);
 
-    animation: batFloat 3s ease-in-out infinite;
+    animation:
+        batFloat 3s ease-in-out infinite;
 
     filter:
-        drop-shadow(0 0 7px rgba(168, 85, 247, 0.7));
+        drop-shadow(
+            0 0 7px
+            rgba(168, 85, 247, 0.7)
+        );
 }
 
 
@@ -407,9 +416,6 @@ body {
     z-index: 1;
 }
 
-
-/* Левое крыло */
-
 .bat-wing-left {
     left: -5px;
 
@@ -427,9 +433,6 @@ body {
             100% 100%
         );
 }
-
-
-/* Правое крыло */
 
 .bat-wing-right {
     right: -5px;
@@ -524,17 +527,11 @@ body {
     z-index: 4;
 }
 
-
-/* Левое ушко */
-
 .bat-ear-left {
     left: 3px;
 
     transform: rotate(-8deg);
 }
-
-
-/* Правое ушко */
 
 .bat-ear-right {
     right: 3px;
@@ -566,20 +563,15 @@ body {
         );
 
     box-shadow:
-        0 0 6px rgba(80, 220, 255, 0.85);
+        0 0 6px
+        rgba(80, 220, 255, 0.85);
 
     z-index: 5;
 }
 
-
-/* Левый глаз */
-
 .bat-eye-left {
     left: 6px;
 }
-
-
-/* Правый глаз */
 
 .bat-eye-right {
     right: 6px;
@@ -602,7 +594,7 @@ body {
     transform:
         translate(-50%, -50%);
 
-    background: #000;
+    background: #000000;
 
     border-radius: 50%;
 }
@@ -631,7 +623,7 @@ body {
 
 
 /* =====================================================
-   МИЛАЯ ЗАКРЫТАЯ УЛЫБКА
+   УЛЫБКА
 ===================================================== */
 
 .bat-smile {
@@ -655,7 +647,7 @@ body {
 
 
 /* =====================================================
-   ПЛАВНОЕ ПАРЕНИЕ
+   АНИМАЦИЯ МЫШКИ
 ===================================================== */
 
 @keyframes batFloat {
@@ -681,6 +673,7 @@ body {
 
 .gold-divider {
     width: 360px;
+
     max-width: 75%;
 
     height: 2px;
@@ -698,12 +691,13 @@ body {
         );
 
     box-shadow:
-        0 0 10px rgba(168, 85, 247, 0.5);
+        0 0 10px
+        rgba(168, 85, 247, 0.5);
 }
 
 
 /* =====================================================
-   ОПИСАНИЕ
+   ОПИСАНИЕ ГЛАВНОЙ
 ===================================================== */
 
 .home-description {
@@ -724,7 +718,8 @@ body {
     transform: rotate(-1deg);
 
     text-shadow:
-        0 0 7px rgba(244, 215, 123, 0.45);
+        0 0 7px
+        rgba(244, 215, 123, 0.45);
 }
 
 
@@ -764,7 +759,8 @@ body {
     text-decoration: none;
 
     box-shadow:
-        0 0 18px rgba(168, 85, 247, 0.45);
+        0 0 18px
+        rgba(168, 85, 247, 0.45);
 
     transition: 0.3s;
 
@@ -778,7 +774,8 @@ body {
         scale(1.03);
 
     box-shadow:
-        0 0 30px rgba(168, 85, 247, 0.7);
+        0 0 30px
+        rgba(168, 85, 247, 0.7);
 }
 
 
@@ -786,27 +783,29 @@ body {
    EXPLORE
 ===================================================== */
 
+.explore-page {
+    overflow: hidden;
+}
+
 .explore-container {
     position: relative;
 
     z-index: 3;
 
     width: 100%;
+
     height: 100vh;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
 
     text-align: center;
 
-    padding: 30px 20px 20px;
+    padding: 35px 20px 25px;
 
-    overflow: hidden;
-}
-
-.explore-page {
     overflow: hidden;
 }
 
@@ -816,7 +815,7 @@ body {
 ===================================================== */
 
 .page-title {
-    margin: 0 0 18px;
+    margin: 0 0 30px;
 
     font-family: "Allura", cursive;
 
@@ -824,7 +823,7 @@ body {
 
     font-weight: 400;
 
-    line-height: 0.9;
+    line-height: 1;
 
     color: #f0c85c;
 
@@ -833,29 +832,28 @@ body {
     transform: rotate(-2deg);
 
     text-shadow:
-        0 0 7px rgba(255, 225, 130, 0.6),
-        0 0 18px rgba(230, 180, 60, 0.45);
-}
+        0 0 7px
+        rgba(255, 225, 130, 0.6),
 
-.page-title .world-name {
-    margin-left: 8px;
+        0 0 18px
+        rgba(230, 180, 60, 0.45);
 }
 
 
 /* =====================================================
-   ВСТУПЛЕНИЕ
+   ТЕКСТ EXPLORE
 ===================================================== */
 
 .explore-intro {
     max-width: 700px;
 
-    margin: 0 auto 24px;
+    margin: 0 auto 35px;
 
     font-family: "Allura", cursive;
 
     font-size: clamp(20px, 2.2vw, 27px);
 
-    line-height: 1.2;
+    line-height: 1.4;
 
     font-style: italic;
 
@@ -864,39 +862,47 @@ body {
 
 
 /* =====================================================
-   НАВИГАЦИЯ
+   НАВИГАЦИЯ EXPLORE
 ===================================================== */
 
 .world-navigation {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     flex-wrap: wrap;
 
-    gap: 14px 12px;
+    gap: 18px 14px;
 
     max-width: 1100px;
 
-    margin-top: 0;
+    margin: 0;
 }
+
+
+/* =====================================================
+   КНОПКИ EXPLORE
+===================================================== */
 
 .world-button {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    min-height: 44px;
+    min-height: 46px;
 
-    padding: 7px 19px;
+    padding: 8px 21px;
 
     border: 1px solid #d9aa35;
 
     border-radius: 17px;
 
-    background: rgba(12, 10, 35, 0.75);
+    background:
+        rgba(12, 10, 35, 0.75);
 
     color: #eac35d;
 
@@ -909,7 +915,8 @@ body {
     text-decoration: none;
 
     box-shadow:
-        0 0 12px rgba(168, 85, 247, 0.18);
+        0 0 12px
+        rgba(168, 85, 247, 0.18);
 
     transition: 0.3s;
 
@@ -926,7 +933,8 @@ body {
     border-color: #f5d477;
 
     box-shadow:
-        0 0 25px rgba(168, 85, 247, 0.45);
+        0 0 25px
+        rgba(168, 85, 247, 0.45);
 }
 
 .cara-button {
@@ -945,8 +953,9 @@ body {
 
     height: 2px;
 
-    margin-top: 24px;
-    margin-bottom: 18px;
+    margin-top: 32px;
+
+    margin-bottom: 25px;
 
     background:
         linear-gradient(
@@ -958,24 +967,25 @@ body {
         );
 
     box-shadow:
-        0 0 10px rgba(168, 85, 247, 0.45);
+        0 0 10px
+        rgba(168, 85, 247, 0.45);
 }
 
 
 /* =====================================================
-   ЦИТАТА
+   ЦИТАТА EXPLORE
 ===================================================== */
 
 .world-quote {
     max-width: 700px;
 
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
 
     font-family: "Allura", cursive;
 
     font-size: clamp(20px, 2.2vw, 27px);
 
-    line-height: 1.2;
+    line-height: 1.4;
 
     color: #dcb65b;
 
@@ -984,21 +994,22 @@ body {
 
 
 /* =====================================================
-   КНОПКА НАЗАД
+   НАЗАД НА ГЛАВНУЮ
 ===================================================== */
 
 .back-home {
     display: inline-block;
 
-    margin-top: 0;
+    margin: 0;
 
-    padding: 7px 22px;
+    padding: 8px 24px;
 
     border: 1px solid #d9aa35;
 
     border-radius: 40px;
 
-    background: rgba(35, 20, 65, 0.55);
+    background:
+        rgba(35, 20, 65, 0.55);
 
     color: #eac35d;
 
@@ -1011,7 +1022,8 @@ body {
     text-decoration: none;
 
     box-shadow:
-        0 0 12px rgba(168, 85, 247, 0.22);
+        0 0 12px
+        rgba(168, 85, 247, 0.22);
 
     transition: 0.3s;
 
@@ -1028,7 +1040,8 @@ body {
     border-color: #f5d477;
 
     box-shadow:
-        0 0 18px rgba(168, 85, 247, 0.55);
+        0 0 18px
+        rgba(168, 85, 247, 0.55);
 }
 
 
@@ -1044,56 +1057,75 @@ body {
     }
 
     .main-title {
-        font-size: clamp(44px, 5.5vw, 68px);
+        font-size:
+            clamp(
+                44px,
+                5.5vw,
+                68px
+            );
     }
 
     .home-description {
         margin-top: 15px;
+
         font-size: 28px;
     }
 
     .main-button {
         margin-top: 18px;
-        padding: 10px 36px;
+
+        padding:
+            10px 36px;
+
         font-size: 27px;
     }
 
+
+    /* Explore */
+
     .explore-container {
-        padding-top: 18px;
+        padding-top: 25px;
     }
 
     .page-title {
+        margin-bottom: 24px;
+
         font-size: 52px;
-        margin-bottom: 14px;
     }
 
     .explore-intro {
-        margin-bottom: 18px;
-        font-size: 22px;
+        margin-bottom: 28px;
+
+        line-height: 1.3;
     }
 
     .world-navigation {
-        gap: 10px 10px;
+        gap: 14px 12px;
     }
 
     .world-button {
-        min-height: 40px;
-        padding: 6px 16px;
-        font-size: 18px;
+        min-height: 42px;
+
+        padding:
+            7px 17px;
+
+        font-size: 19px;
     }
 
     .explore-divider {
-        margin-top: 18px;
-        margin-bottom: 14px;
+        margin-top: 27px;
+
+        margin-bottom: 21px;
     }
 
     .world-quote {
-        margin-bottom: 16px;
-        font-size: 21px;
+        margin-bottom: 25px;
+
+        font-size: 22px;
     }
 
     .back-home {
-        font-size: 18px;
+        font-size: 19px;
     }
 }
 
@@ -1104,8 +1136,11 @@ body {
 
 @media (max-width: 700px) {
 
+    /* Языки */
+
     .language-switcher {
         top: 12px;
+
         right: 12px;
 
         gap: 6px;
@@ -1113,11 +1148,13 @@ body {
 
     .language-button {
         width: 38px;
+
         height: 31px;
     }
 
     .flag-image {
         width: 25px;
+
         height: 17px;
     }
 
@@ -1137,6 +1174,7 @@ body {
 
     .main-title {
         font-size: 48px;
+
         line-height: 0.95;
     }
 
@@ -1148,6 +1186,7 @@ body {
 
     .trixi-bat {
         width: 48px;
+
         height: 44px;
 
         transform:
@@ -1167,6 +1206,7 @@ body {
 
     .main-button {
         width: 90%;
+
         min-width: 0;
 
         margin-top: 22px;
@@ -1189,34 +1229,25 @@ body {
         min-height: 100vh;
 
         padding:
-            65px
+            70px
             15px
-            30px;
+            35px;
     }
 
     .page-title {
+        margin-bottom: 25px;
+
         font-size: 44px;
-        line-height: 0.95;
 
-        margin-bottom: 18px;
-    }
-
-    .page-title .world-name {
-        display: block;
-
-        margin:
-            5px
-            0
-            0;
+        line-height: 1;
     }
 
     .explore-intro {
-        margin-top: 0;
-        margin-bottom: 22px;
+        margin-bottom: 28px;
 
         font-size: 23px;
 
-        line-height: 1.15;
+        line-height: 1.35;
     }
 
     .world-navigation {
@@ -1224,15 +1255,13 @@ body {
 
         width: 100%;
 
-        margin-top: 0;
-
-        gap: 10px;
+        gap: 13px;
     }
 
     .world-button {
         width: 92%;
 
-        min-height: 46px;
+        min-height: 47px;
 
         font-size: 21px;
     }
@@ -1242,23 +1271,21 @@ body {
     }
 
     .explore-divider {
-        margin-top: 22px;
-        margin-bottom: 16px;
+        margin-top: 28px;
+
+        margin-bottom: 22px;
     }
 
     .world-quote {
-        margin-top: 0;
-        margin-bottom: 18px;
+        margin-bottom: 24px;
 
         font-size: 22px;
 
-        line-height: 1.15;
+        line-height: 1.3;
     }
 
     .back-home {
         width: 92%;
-
-        margin-top: 0;
 
         font-size: 21px;
     }
