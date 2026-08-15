@@ -1,11 +1,11 @@
 /* =====================================================
    TRIXIOBSERVES
-   ОСНОВНЫЕ СТИЛИ
+   CLEAN STYLE.CSS
 ===================================================== */
 
 
 /* =====================================================
-   БАЗА
+   ОСНОВА
 ===================================================== */
 
 * {
@@ -36,6 +36,8 @@ body {
     color: #f2c95c;
 
     overflow-x: hidden;
+
+    font-family: "Allura", cursive;
 }
 
 
@@ -65,7 +67,6 @@ body {
     z-index: 0;
 }
 
-
 .glow-purple {
     position: fixed;
 
@@ -94,7 +95,6 @@ body {
 ===================================================== */
 
 .language-switcher {
-
     position: fixed;
 
     top: 20px;
@@ -107,43 +107,28 @@ body {
     z-index: 1000;
 }
 
-
 .language-button {
-
     width: 42px;
     height: 34px;
 
     padding: 0;
 
-    border:
-        1px solid
-        rgba(245, 212, 119, 0.45);
+    border: 1px solid rgba(245, 212, 119, 0.45);
 
     border-radius: 10px;
 
-    background:
-        rgba(8, 7, 25, 0.9);
+    background: rgba(8, 7, 25, 0.9);
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease;
+    transition: 0.25s ease;
 }
 
-
-/* SVG-флажок */
-
 .flag-image {
-
     width: 29px;
     height: 20px;
 
@@ -152,36 +137,25 @@ body {
     border-radius: 3px;
 
     box-shadow:
-        0 0 5px
-        rgba(245, 212, 119, 0.3);
+        0 0 5px rgba(245, 212, 119, 0.3);
 }
-
 
 .language-button:hover {
+    transform: translateY(-2px);
 
-    transform:
-        translateY(-2px);
-
-    border-color:
-        #f5d477;
+    border-color: #f5d477;
 
     box-shadow:
-        0 0 15px
-        rgba(168, 85, 247, 0.6);
+        0 0 15px rgba(168, 85, 247, 0.6);
 }
 
-
 .language-button.active {
+    border-color: #f5d477;
 
-    border-color:
-        #f5d477;
-
-    background:
-        rgba(75, 40, 110, 0.7);
+    background: rgba(75, 40, 110, 0.7);
 
     box-shadow:
-        0 0 15px
-        rgba(245, 212, 119, 0.65);
+        0 0 15px rgba(245, 212, 119, 0.65);
 }
 
 
@@ -190,7 +164,6 @@ body {
 ===================================================== */
 
 .magic-dot {
-
     position: fixed;
 
     width: 8px;
@@ -204,22 +177,17 @@ body {
         0 0 10px #39ff88,
         0 0 25px #39ff88;
 
-    animation:
-        floating 4s ease-in-out infinite;
+    animation: floating 4s ease-in-out infinite;
 
     z-index: 2;
 }
 
-
 .dot-one {
-
     top: 27%;
     right: 12%;
 }
 
-
 .dot-two {
-
     bottom: 20%;
     left: 10%;
 
@@ -232,15 +200,12 @@ body {
     animation-delay: 1s;
 }
 
-
 .dot-three {
-
     top: 47%;
     left: 7%;
 
     animation-delay: 2s;
 }
-
 
 @keyframes floating {
 
@@ -260,27 +225,22 @@ body {
 ===================================================== */
 
 .hero {
-
     position: relative;
 
     z-index: 3;
 
+    width: 100%;
     min-height: 100vh;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
 
-    padding:
-        55px
-        20px
-        40px;
+    padding: 55px 20px 30px;
 }
 
 
@@ -289,54 +249,34 @@ body {
 ===================================================== */
 
 .main-title {
-
     margin: 0;
 
     max-width: 1100px;
 
-    font-family:
-        "Allura",
-        cursive;
+    font-family: "Allura", cursive;
 
-    font-size:
-        clamp(
-            55px,
-            7vw,
-            92px
-        );
+    font-size: clamp(48px, 6vw, 82px);
 
-    line-height: 0.95;
+    line-height: 0.9;
 
     font-weight: 400;
-
     font-style: italic;
 
     color: #f1c85c;
 
-    transform:
-        rotate(-1deg);
+    transform: rotate(-1deg);
 
     text-shadow:
-
-        0 0 6px
-        rgba(255, 225, 130, 0.65),
-
-        0 0 18px
-        rgba(230, 180, 60, 0.5),
-
-        0 0 35px
-        rgba(168, 85, 247, 0.2);
+        0 0 6px rgba(255, 225, 130, 0.65),
+        0 0 18px rgba(230, 180, 60, 0.5),
+        0 0 35px rgba(168, 85, 247, 0.2);
 }
 
-
 .welcome-line {
-
     display: block;
 }
 
-
 .in-world {
-
     display: inline-block;
 
     margin-right: 8px;
@@ -348,19 +288,17 @@ body {
 ===================================================== */
 
 .world-name {
-
-    display: inline-block;
+    display: inline-flex;
 
     position: relative;
 
-    font-family:
-        "Allura",
-        cursive;
+    align-items: center;
+
+    font-family: "Allura", cursive;
 
     font-style: italic;
 
     background:
-
         linear-gradient(
             90deg,
             #35f59a,
@@ -370,34 +308,37 @@ body {
         );
 
     -webkit-background-clip: text;
-
     background-clip: text;
 
     -webkit-text-fill-color: transparent;
 
-    transform:
-        rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+.world-name-text {
+    display: inline-block;
 }
 
 
-/* Подчёркивание TrixiObserves */
+/* =====================================================
+   ПОДЧЁРКИВАНИЕ
+===================================================== */
 
 .world-name::after {
-
     content: "";
 
-    display: block;
+    position: absolute;
 
-    width: 100%;
+    left: 0;
+    right: 0;
+
+    bottom: -5px;
 
     height: 3px;
-
-    margin-top: 4px;
 
     border-radius: 50%;
 
     background:
-
         linear-gradient(
             90deg,
             #39ff88,
@@ -412,230 +353,45 @@ body {
 
 
 /* =====================================================
-   ЛЕТУЧАЯ МЫШКА
+   МЫШКА
 ===================================================== */
 
-.bat {
+.trixi-bat {
+    position: relative;
 
     display: inline-block;
 
-    position: relative;
-
     width: 58px;
-    height: 45px;
+    height: 48px;
 
     margin-left: 10px;
 
     vertical-align: middle;
 
-    transform:
-        translateY(-7px);
+    transform: translateY(-8px);
 
     filter:
         drop-shadow(
-            0 0 8px
-            rgba(168, 85, 247, 0.7)
+            0 0 8px rgba(168, 85, 247, 0.7)
         );
 
-    animation:
-        batFloat 3s ease-in-out infinite;
+    animation: batFloat 3s ease-in-out infinite;
 }
-
 
 @keyframes batFloat {
 
     0%,
     100% {
-
         transform:
-            translateY(-7px)
+            translateY(-8px)
             rotate(-2deg);
     }
 
     50% {
-
         transform:
-            translateY(-12px)
+            translateY(-13px)
             rotate(2deg);
     }
-}
-
-
-/* =====================================================
-   ТЕЛО МЫШКИ
-===================================================== */
-
-.bat-body {
-
-    position: absolute;
-
-    width: 22px;
-    height: 28px;
-
-    left: 18px;
-    top: 14px;
-
-    background:
-
-        linear-gradient(
-            180deg,
-            #4a302d,
-            #17131b
-        );
-
-    border-radius: 50%;
-
-    z-index: 2;
-}
-
-
-/* =====================================================
-   ГОЛОВА МЫШКИ
-===================================================== */
-
-.bat-head {
-
-    position: absolute;
-
-    width: 36px;
-    height: 32px;
-
-    left: 11px;
-    top: 5px;
-
-    background:
-
-        linear-gradient(
-            180deg,
-            #4b322f,
-            #18131b
-        );
-
-    border-radius: 50%;
-
-    z-index: 4;
-}
-
-
-/* =====================================================
-   УШИ
-===================================================== */
-
-.bat-ear {
-
-    position: absolute;
-
-    width: 14px;
-    height: 21px;
-
-    top: -12px;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #3c2929,
-            #17131b
-        );
-
-    clip-path:
-        polygon(
-            50% 0,
-            100% 100%,
-            0 100%
-        );
-
-    z-index: -1;
-}
-
-
-.bat-ear-left {
-
-    left: 2px;
-
-    transform:
-        rotate(-10deg);
-}
-
-
-.bat-ear-right {
-
-    right: 2px;
-
-    transform:
-        rotate(10deg);
-}
-
-
-/* =====================================================
-   ГЛАЗА
-===================================================== */
-
-.bat-eye {
-
-    position: absolute;
-
-    width: 9px;
-    height: 13px;
-
-    top: 12px;
-
-    border-radius: 50%;
-
-    background:
-
-        radial-gradient(
-            circle at 45% 30%,
-
-            #ffffff 0 10%,
-
-            #73dcff 11% 43%,
-
-            #927b55 44% 68%,
-
-            #14121a 69%
-        );
-
-    box-shadow:
-
-        0 0 7px
-        rgba(90, 220, 255, 0.8);
-
-    z-index: 5;
-}
-
-
-.bat-eye-left {
-
-    left: 7px;
-}
-
-
-.bat-eye-right {
-
-    right: 7px;
-}
-
-
-/* =====================================================
-   НОС
-===================================================== */
-
-.bat-nose {
-
-    position: absolute;
-
-    width: 6px;
-    height: 5px;
-
-    left: 15px;
-    top: 26px;
-
-    border-radius: 50%;
-
-    background: #a76b62;
-
-    z-index: 6;
 }
 
 
@@ -644,16 +400,14 @@ body {
 ===================================================== */
 
 .bat-wing {
-
     position: absolute;
+
+    top: 15px;
 
     width: 34px;
     height: 32px;
 
-    top: 14px;
-
     background:
-
         linear-gradient(
             135deg,
             #17131b,
@@ -664,9 +418,7 @@ body {
     z-index: 1;
 }
 
-
 .bat-wing-left {
-
     left: -5px;
 
     clip-path:
@@ -683,9 +435,7 @@ body {
         );
 }
 
-
 .bat-wing-right {
-
     right: -5px;
 
     clip-path:
@@ -704,21 +454,205 @@ body {
 
 
 /* =====================================================
+   ТЕЛО
+===================================================== */
+
+.bat-body {
+    position: absolute;
+
+    width: 22px;
+    height: 28px;
+
+    left: 18px;
+    top: 15px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4a302d,
+            #17131b
+        );
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   ГОЛОВА
+===================================================== */
+
+.bat-head {
+    position: absolute;
+
+    width: 36px;
+    height: 32px;
+
+    left: 11px;
+    top: 6px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #4b322f,
+            #18131b
+        );
+
+    border-radius: 50%;
+
+    z-index: 4;
+}
+
+
+/* =====================================================
+   УШИ
+===================================================== */
+
+.bat-ear {
+    position: absolute;
+
+    width: 14px;
+    height: 21px;
+
+    top: -12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3c2929,
+            #17131b
+        );
+
+    clip-path:
+        polygon(
+            50% 0,
+            100% 100%,
+            0 100%
+        );
+
+    z-index: -1;
+}
+
+.bat-ear-left {
+    left: 2px;
+
+    transform: rotate(-10deg);
+}
+
+.bat-ear-right {
+    right: 2px;
+
+    transform: rotate(10deg);
+}
+
+
+/* =====================================================
+   ГЛАЗА
+   Голубые глаза + ЧЁРНЫЕ ЗРАЧКИ
+===================================================== */
+
+.bat-eye {
+    position: absolute;
+
+    top: 12px;
+
+    width: 10px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #7de5ff;
+
+    box-shadow:
+        0 0 7px rgba(90, 220, 255, 0.8);
+
+    z-index: 5;
+}
+
+.bat-eye-left {
+    left: 7px;
+}
+
+.bat-eye-right {
+    right: 7px;
+}
+
+
+/* ЧЁРНЫЕ ЗРАЧКИ */
+
+.bat-pupil {
+    position: absolute;
+
+    width: 4px;
+    height: 7px;
+
+    left: 3px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: #050505;
+}
+
+
+/* =====================================================
+   НОС
+===================================================== */
+
+.bat-nose {
+    position: absolute;
+
+    width: 5px;
+    height: 4px;
+
+    left: 15px;
+    top: 26px;
+
+    border-radius: 50%;
+
+    background: #a76b62;
+
+    z-index: 6;
+}
+
+
+/* =====================================================
+   УЛЫБКА
+   Закрытая — без открытого рта
+===================================================== */
+
+.bat-smile {
+    position: absolute;
+
+    width: 13px;
+    height: 6px;
+
+    left: 11px;
+    top: 25px;
+
+    border-bottom:
+        2px solid #d99b91;
+
+    border-radius: 0 0 50% 50%;
+
+    z-index: 6;
+}
+
+
+/* =====================================================
    РАЗДЕЛИТЕЛЬ
 ===================================================== */
 
 .gold-divider {
-
     width: 360px;
-
     max-width: 75%;
 
     height: 2px;
 
-    margin-top: 20px;
+    margin-top: 18px;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -729,49 +663,33 @@ body {
         );
 
     box-shadow:
-
-        0 0 10px
-        rgba(168, 85, 247, 0.5);
+        0 0 10px rgba(168, 85, 247, 0.5);
 }
 
 
 /* =====================================================
-   ОПИСАНИЕ ГЛАВНОЙ
+   ОПИСАНИЕ
 ===================================================== */
 
 .home-description {
+    max-width: 700px;
 
-    max-width: 750px;
+    margin: 20px auto 0;
 
-    margin:
-        25px
-        auto
-        0;
+    font-family: "Allura", cursive;
 
-    font-family:
-        "Allura",
-        cursive;
+    font-size: clamp(25px, 3vw, 36px);
 
-    font-size:
-        clamp(
-            28px,
-            3.8vw,
-            42px
-        );
-
-    line-height: 1.25;
+    line-height: 1.15;
 
     font-style: italic;
 
     color: #eac35d;
 
-    transform:
-        rotate(-1deg);
+    transform: rotate(-1deg);
 
     text-shadow:
-
-        0 0 7px
-        rgba(244, 215, 123, 0.45);
+        0 0 7px rgba(244, 215, 123, 0.45);
 }
 
 
@@ -780,25 +698,19 @@ body {
 ===================================================== */
 
 .main-button {
-
     display: inline-block;
 
-    margin-top: 32px;
+    margin-top: 25px;
 
-    padding:
-        14px
-        48px;
+    padding: 12px 42px;
 
-    min-width: 300px;
+    min-width: 280px;
 
-    border:
-        2px solid
-        #d9aa35;
+    border: 2px solid #d9aa35;
 
     border-radius: 50px;
 
     background:
-
         linear-gradient(
             135deg,
             #35146d,
@@ -808,66 +720,59 @@ body {
 
     color: #f5d477;
 
-    font-family:
-        "Allura",
-        cursive;
+    font-family: "Allura", cursive;
 
-    font-size: 31px;
+    font-size: 29px;
 
     font-style: italic;
 
     text-decoration: none;
 
     box-shadow:
-
-        0 0 18px
-        rgba(168, 85, 247, 0.45);
+        0 0 18px rgba(168, 85, 247, 0.45);
 
     transition: 0.3s;
 
-    transform:
-        rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
-
 .main-button:hover {
-
     transform:
         rotate(-1deg)
         translateY(-4px)
         scale(1.03);
 
     box-shadow:
-
-        0 0 30px
-        rgba(168, 85, 247, 0.7);
+        0 0 30px rgba(168, 85, 247, 0.7);
 }
 
 
 /* =====================================================
-   СТРАНИЦА EXPLORE
+   EXPLORE
 ===================================================== */
 
 .explore-container {
-
     position: relative;
 
     z-index: 3;
 
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
 
     text-align: center;
 
-    padding:
-        70px
-        20px
-        45px;
+    padding: 25px 20px 15px;
+
+    overflow: hidden;
+}
+
+.explore-page {
+    overflow: hidden;
 }
 
 
@@ -876,76 +781,50 @@ body {
 ===================================================== */
 
 .page-title {
-
     margin: 0;
 
-    font-family:
-        "Allura",
-        cursive;
+    font-family: "Allura", cursive;
 
-    font-size:
-        clamp(
-            55px,
-            7vw,
-            90px
-        );
+    font-size: clamp(42px, 5vw, 62px);
 
     font-weight: 400;
 
-    line-height: 1;
+    line-height: 0.9;
 
     color: #f0c85c;
 
     font-style: italic;
 
-    transform:
-        rotate(-2deg);
+    transform: rotate(-2deg);
 
     text-shadow:
-
-        0 0 7px
-        rgba(255, 225, 130, 0.6),
-
-        0 0 18px
-        rgba(230, 180, 60, 0.45);
+        0 0 7px rgba(255, 225, 130, 0.6),
+        0 0 18px rgba(230, 180, 60, 0.45);
 }
 
-
 .page-title .world-name {
-
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 
 /* =====================================================
-   ВСТУПЛЕНИЕ EXPLORE
+   ВСТУПЛЕНИЕ
 ===================================================== */
 
 .explore-intro {
+    max-width: 700px;
 
-    max-width: 800px;
+    margin: 12px auto 0;
 
-    margin-top: 25px;
+    font-family: "Allura", cursive;
 
-    font-family:
-        "Allura",
-        cursive;
+    font-size: clamp(20px, 2.2vw, 27px);
 
-    font-size:
-        clamp(
-            25px,
-            3.2vw,
-            36px
-        );
-
-    line-height: 1.3;
+    line-height: 1.1;
 
     font-style: italic;
 
     color: #eac35d;
-
-    transform:
-        rotate(-1deg);
 }
 
 
@@ -954,93 +833,71 @@ body {
 ===================================================== */
 
 .world-navigation {
-
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     flex-wrap: wrap;
 
-    gap: 16px;
+    gap: 8px;
 
-    max-width: 1150px;
+    max-width: 1100px;
 
-    margin-top: 30px;
+    margin-top: 18px;
 }
 
-
 .world-button {
-
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    min-height: 62px;
+    min-height: 44px;
 
-    padding:
-        10px
-        25px;
+    padding: 7px 19px;
 
-    border:
-        1px solid
-        #d9aa35;
+    border: 1px solid #d9aa35;
 
-    border-radius: 20px;
+    border-radius: 17px;
 
-    background:
-        rgba(12, 10, 35, 0.75);
+    background: rgba(12, 10, 35, 0.75);
 
     color: #eac35d;
 
-    font-family:
-        "Allura",
-        cursive;
+    font-family: "Allura", cursive;
 
-    font-size: 26px;
+    font-size: 20px;
 
     font-style: italic;
 
     text-decoration: none;
 
     box-shadow:
-
-        0 0 12px
-        rgba(168, 85, 247, 0.18);
+        0 0 12px rgba(168, 85, 247, 0.18);
 
     transition: 0.3s;
 
-    transform:
-        rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
-
 .world-button:hover {
-
     transform:
         rotate(-1deg)
-        translateY(-4px);
+        translateY(-3px);
 
     color: #ffe9a6;
 
-    border-color:
-        #f5d477;
+    border-color: #f5d477;
 
     box-shadow:
-
-        0 0 25px
-        rgba(168, 85, 247, 0.45);
+        0 0 25px rgba(168, 85, 247, 0.45);
 }
 
-
 .cara-button {
+    margin-top: 3px;
 
-    margin-top: 18px;
-
-    min-width: 290px;
+    min-width: 260px;
 }
 
 
@@ -1049,15 +906,13 @@ body {
 ===================================================== */
 
 .explore-divider {
-
-    width: 220px;
+    width: 180px;
 
     height: 2px;
 
-    margin-top: 35px;
+    margin-top: 12px;
 
     background:
-
         linear-gradient(
             90deg,
             transparent,
@@ -1067,9 +922,7 @@ body {
         );
 
     box-shadow:
-
-        0 0 10px
-        rgba(168, 85, 247, 0.45);
+        0 0 10px rgba(168, 85, 247, 0.45);
 }
 
 
@@ -1078,361 +931,19 @@ body {
 ===================================================== */
 
 .world-quote {
-
-    max-width: 800px;
-
-    margin-top: 22px;
-
-    font-family:
-        "Allura",
-        cursive;
-
-    font-size:
-        clamp(
-            26px,
-            3vw,
-            36px
-        );
-
-    line-height: 1.3;
-
-    color: #dcb65b;
-
-    transform:
-        rotate(-1deg);
-}
-
-
-/* =====================================================
-   КНОПКА ВОЗВРАТА
-===================================================== */
-
-.back-home {
-
-    display: inline-block;
-
-    margin-top: 28px;
-
-    padding:
-        12px
-        30px;
-
-    border:
-        1px solid
-        #d9aa35;
-
-    border-radius: 40px;
-
-    background:
-        rgba(35, 20, 65, 0.55);
-
-    color: #eac35d;
-
-    font-family:
-        "Allura",
-        cursive;
-
-    font-size: 27px;
-
-    font-style: italic;
-
-    text-decoration: none;
-
-    box-shadow:
-
-        0 0 12px
-        rgba(168, 85, 247, 0.22);
-
-    transition:
-        transform 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-
-    transform:
-        rotate(-1deg);
-}
-
-
-.back-home:hover {
-
-    transform:
-        rotate(-1deg)
-        translateY(-4px);
-
-    color: #ffe9a6;
-
-    border-color:
-        #f5d477;
-
-    box-shadow:
-
-        0 0 18px
-        rgba(168, 85, 247, 0.55),
-
-        0 0 30px
-        rgba(57, 255, 136, 0.12);
-}
-
-
-/* =====================================================
-   МОБИЛЬНАЯ ВЕРСИЯ
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .language-switcher {
-
-        top: 12px;
-        right: 12px;
-
-        gap: 6px;
-    }
-
-
-    .language-button {
-
-        width: 38px;
-        height: 31px;
-    }
-
-
-    .flag-image {
-
-        width: 25px;
-        height: 17px;
-    }
-
-
-    .hero {
-
-        padding:
-            65px
-            15px
-            35px;
-    }
-
-
-    .main-title {
-
-        font-size: 50px;
-    }
-
-
-    .world-name {
-
-        font-size: 60px;
-    }
-
-
-    .bat {
-
-        transform:
-            scale(0.8)
-            translateY(-5px);
-    }
-
-
-    .home-description {
-
-        font-size: 29px;
-    }
-
-
-    .main-button {
-
-        width: 90%;
-
-        min-width: 0;
-
-        font-size: 29px;
-    }
-
-
-    .explore-container {
-
-        padding:
-            65px
-            15px
-            40px;
-    }
-
-
-    .page-title {
-
-        font-size: 55px;
-    }
-
-
-    .page-title .world-name {
-
-        display: block;
-
-        margin:
-            7px
-            0
-            0;
-    }
-
-
-    .explore-intro {
-
-        font-size: 28px;
-    }
-
-
-    .world-navigation {
-
-        flex-direction: column;
-
-        width: 100%;
-    }
-
-
-    .world-button {
-
-        width: 92%;
-
-        font-size: 26px;
-    }
-
-
-    .cara-button {
-
-        width: 92%;
-    }
-
-
-    .back-home {
-
-        font-size: 25px;
-
-        width: 92%;
-    }
-   /* =====================================================
-   EXPLORE — КОМПАКТНЫЙ ЭКРАН
-===================================================== */
-
-/* =====================================================
-   EXPLORE — ВСЯ СТРАНИЦА В ОДИН ЭКРАН
-===================================================== */
-
-/* =====================================================
-   КОМПАКТНЫЕ СТРАНИЦЫ
-   БЕЗ ВЕРТИКАЛЬНОЙ ПРОКРУТКИ НА ПК
-===================================================== */
-
-.explore-page {
-    overflow: hidden;
-}
-
-.explore-container {
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-
-    padding: 22px 20px 12px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    overflow: hidden;
-}
-
-
-/* =====================================================
-   ЗАГОЛОВОК
-===================================================== */
-
-.page-title {
-    margin: 0;
-
-    font-size: clamp(42px, 4.5vw, 60px);
-
-    line-height: 0.9;
-
-    text-align: center;
-}
-
-.page-title .world-name {
-    margin-left: 7px;
-}
-
-
-/* =====================================================
-   ВСТУПЛЕНИЕ
-===================================================== */
-
-.explore-intro {
-    max-width: 680px;
-
-    margin: 12px auto 0;
-
-    font-size: clamp(18px, 1.9vw, 24px);
-
-    line-height: 1.12;
-
-    text-align: center;
-}
-
-
-/* =====================================================
-   КНОПКИ
-===================================================== */
-
-.world-navigation {
-    max-width: 1050px;
-
-    margin-top: 16px;
-
-    gap: 8px;
-}
-
-.world-button {
-    min-height: 42px;
-
-    padding: 6px 17px;
-
-    font-size: 18px;
-
-    line-height: 1;
-
-    border-radius: 16px;
-}
-
-.cara-button {
-    margin-top: 3px;
-}
-
-
-/* =====================================================
-   РАЗДЕЛИТЕЛЬ
-===================================================== */
-
-.explore-divider {
-    width: 170px;
-
-    height: 2px;
-
-    margin-top: 12px;
-}
-
-
-/* =====================================================
-   ЦИТАТА
-===================================================== */
-
-.world-quote {
-    max-width: 680px;
+    max-width: 700px;
 
     margin: 8px auto 0;
 
-    font-size: clamp(18px, 1.9vw, 24px);
+    font-family: "Allura", cursive;
+
+    font-size: clamp(20px, 2.2vw, 27px);
 
     line-height: 1.08;
 
-    text-align: center;
+    color: #dcb65b;
+
+    transform: rotate(-1deg);
 }
 
 
@@ -1441,59 +952,104 @@ body {
 ===================================================== */
 
 .back-home {
+    display: inline-block;
+
     margin-top: 8px;
 
     padding: 7px 22px;
 
+    border: 1px solid #d9aa35;
+
+    border-radius: 40px;
+
+    background: rgba(35, 20, 65, 0.55);
+
+    color: #eac35d;
+
+    font-family: "Allura", cursive;
+
     font-size: 20px;
 
-    line-height: 1;
+    font-style: italic;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 12px rgba(168, 85, 247, 0.22);
+
+    transition: 0.3s;
+
+    transform: rotate(-1deg);
+}
+
+.back-home:hover {
+    transform:
+        rotate(-1deg)
+        translateY(-3px);
+
+    color: #ffe9a6;
+
+    border-color: #f5d477;
+
+    box-shadow:
+        0 0 18px rgba(168, 85, 247, 0.55);
 }
 
 
 /* =====================================================
-   НИЗКИЕ ЭКРАНЫ
+   НЕВЫСОКИЙ ЭКРАН
 ===================================================== */
 
-@media (max-height: 850px) and (min-width: 701px) {
+@media (max-height: 800px) and (min-width: 701px) {
+
+    .hero {
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+
+    .main-title {
+        font-size: clamp(44px, 5.5vw, 68px);
+    }
+
+    .home-description {
+        margin-top: 15px;
+        font-size: 28px;
+    }
+
+    .main-button {
+        margin-top: 18px;
+        padding: 10px 36px;
+        font-size: 27px;
+    }
 
     .explore-container {
-        padding-top: 16px;
-        padding-bottom: 8px;
+        padding-top: 18px;
     }
 
     .page-title {
-        font-size: 50px;
+        font-size: 52px;
     }
 
     .explore-intro {
-        margin-top: 8px;
-        font-size: 21px;
+        margin-top: 7px;
+        font-size: 22px;
     }
 
     .world-navigation {
-        margin-top: 12px;
-        gap: 6px;
+        margin-top: 10px;
     }
 
     .world-button {
-        min-height: 38px;
-        padding: 5px 15px;
-        font-size: 17px;
-    }
-
-    .explore-divider {
-        margin-top: 9px;
+        min-height: 40px;
+        padding: 6px 16px;
+        font-size: 18px;
     }
 
     .world-quote {
-        margin-top: 6px;
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .back-home {
-        margin-top: 6px;
-        padding: 6px 20px;
         font-size: 18px;
     }
 }
@@ -1505,6 +1061,72 @@ body {
 
 @media (max-width: 700px) {
 
+    .language-switcher {
+        top: 12px;
+        right: 12px;
+
+        gap: 6px;
+    }
+
+    .language-button {
+        width: 38px;
+        height: 31px;
+    }
+
+    .flag-image {
+        width: 25px;
+        height: 17px;
+    }
+
+
+    /* Главная */
+
+    .hero {
+        min-height: 100vh;
+
+        padding:
+            70px
+            15px
+            30px;
+    }
+
+    .main-title {
+        font-size: 48px;
+        line-height: 0.95;
+    }
+
+    .world-name {
+        display: inline-flex;
+    }
+
+    .trixi-bat {
+        transform:
+            scale(0.75)
+            translateY(-5px);
+    }
+
+    .home-description {
+        max-width: 95%;
+
+        margin-top: 20px;
+
+        font-size: 25px;
+
+        line-height: 1.15;
+    }
+
+    .main-button {
+        width: 90%;
+        min-width: 0;
+
+        margin-top: 22px;
+
+        font-size: 27px;
+    }
+
+
+    /* Explore */
+
     .explore-page {
         overflow-y: auto;
     }
@@ -1513,22 +1135,31 @@ body {
         height: auto;
         min-height: 100vh;
 
-        padding: 65px 15px 30px;
+        padding:
+            65px
+            15px
+            30px;
     }
 
     .page-title {
-        font-size: 43px;
+        font-size: 44px;
         line-height: 0.95;
     }
 
     .page-title .world-name {
         display: block;
-        margin: 4px 0 0;
+
+        margin:
+            5px
+            0
+            0;
     }
 
     .explore-intro {
         margin-top: 14px;
+
         font-size: 23px;
+
         line-height: 1.15;
     }
 
@@ -1550,475 +1181,25 @@ body {
         font-size: 21px;
     }
 
-    .explore-divider {
-        margin-top: 18px;
-    }
-
-    .world-quote {
-        margin-top: 10px;
-        font-size: 22px;
-    }
-
-    .back-home {
-        width: 92%;
-        margin-top: 10px;
-        font-size: 21px;
-    }
-}
-
-/* =====================================================
-   ЗАГОЛОВОК
-===================================================== */
-
-.page-title {
-
-    margin: 0;
-
-    font-size:
-        clamp(
-            48px,
-            5.5vw,
-            68px
-        );
-
-    line-height: 0.95;
-}
-
-
-.page-title .world-name {
-
-    margin-left: 8px;
-}
-
-
-/* =====================================================
-   ВСТУПЛЕНИЕ
-===================================================== */
-
-.explore-intro {
-
-    max-width: 720px;
-
-    margin:
-        12px
-        auto
-        0;
-
-    font-size:
-        clamp(
-            21px,
-            2.3vw,
-            28px
-        );
-
-    line-height: 1.15;
-}
-
-
-/* =====================================================
-   КНОПКИ
-===================================================== */
-
-.world-navigation {
-
-    max-width: 1100px;
-
-    margin-top: 18px;
-
-    gap: 9px;
-}
-
-
-.world-button {
-
-    min-height: 46px;
-
-    padding:
-        7px
-        20px;
-
-    font-size: 21px;
-
-    line-height: 1;
-
-    border-radius: 17px;
-}
-
-
-.cara-button {
-
-    margin-top: 5px;
-}
-
-
-/* =====================================================
-   РАЗДЕЛИТЕЛЬ
-===================================================== */
-
-.explore-divider {
-
-    width: 190px;
-
-    height: 2px;
-
-    margin-top: 15px;
-}
-
-
-/* =====================================================
-   ЦИТАТА
-===================================================== */
-
-.world-quote {
-
-    max-width: 720px;
-
-    margin:
-        10px
-        auto
-        0;
-
-    font-size:
-        clamp(
-            20px,
-            2.2vw,
-            27px
-        );
-
-    line-height: 1.1;
-}
-
-
-/* =====================================================
-   КНОПКА НАЗАД
-===================================================== */
-
-.back-home {
-
-    margin-top: 9px;
-
-    padding:
-        8px
-        25px;
-
-    font-size: 22px;
-
-    line-height: 1;
-}
-
-
-/* =====================================================
-   ЕСЛИ ЭКРАН НЕВЫСОКИЙ
-===================================================== */
-
-@media (max-height: 800px) and (min-width: 701px) {
-
-    .explore-container {
-
-        padding:
-            20px
-            15px
-            12px;
-    }
-
-
-    .page-title {
-
-        font-size: 55px;
-    }
-
-
-    .explore-intro {
-
-        margin-top: 8px;
-
-        font-size: 23px;
-
-        line-height: 1.1;
-    }
-
-
-    .world-navigation {
-
-        margin-top: 12px;
-
-        gap: 7px;
-    }
-
-
-    .world-button {
-
-        min-height: 42px;
-
-        padding:
-            6px
-            17px;
-
-        font-size: 19px;
-    }
-
-
     .cara-button {
-
-        margin-top: 3px;
-    }
-
-
-    .explore-divider {
-
-        margin-top: 10px;
-    }
-
-
-    .world-quote {
-
-        margin-top: 7px;
-
-        font-size: 22px;
-
-        line-height: 1.05;
-    }
-
-
-    .back-home {
-
-        margin-top: 7px;
-
-        padding:
-            7px
-            22px;
-
-        font-size: 20px;
-    }
-}
-
-
-/* =====================================================
-   ТЕЛЕФОН
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .explore-page {
-
-        overflow-y: auto;
-    }
-
-
-    .explore-container {
-
-        height: auto;
-
-        min-height: 100vh;
-
-        padding:
-            65px
-            15px
-            30px;
-    }
-
-
-    .page-title {
-
-        font-size: 48px;
-
-        line-height: 1;
-    }
-
-
-    .page-title .world-name {
-
-        display: block;
-
-        margin:
-            5px
-            0
-            0;
-    }
-
-
-    .explore-intro {
-
-        margin-top: 15px;
-
-        font-size: 25px;
-
-        line-height: 1.15;
-    }
-
-
-    .world-navigation {
-
-        flex-direction: column;
-
-        width: 100%;
-
-        margin-top: 20px;
-
-        gap: 10px;
-    }
-
-
-    .world-button {
-
         width: 92%;
-
-        min-height: 48px;
-
-        font-size: 23px;
-    }
-
-
-    .explore-divider {
-
-        margin-top: 20px;
-    }
-
-
-    .world-quote {
-
-        font-size: 24px;
-
-        margin-top: 12px;
-    }
-
-
-    .back-home {
-
-        width: 92%;
-
-        margin-top: 12px;
-
-        font-size: 23px;
-    }
-}
-/* =====================================================
-   НЕБОЛЬШИЕ ЭКРАНЫ ПО ВЫСОТЕ
-===================================================== */
-
-@media (max-height: 800px) and (min-width: 701px) {
-
-    .explore-container {
-
-        padding-top: 32px;
-    }
-
-    .page-title {
-
-        font-size: 62px;
-    }
-
-    .explore-intro {
-
-        margin-top: 12px;
-
-        font-size: 26px;
-    }
-
-    .world-navigation {
-
-        margin-top: 16px;
-
-        gap: 10px;
-    }
-
-    .world-button {
-
-        min-height: 48px;
-
-        padding:
-            7px
-            19px;
-
-        font-size: 21px;
     }
 
     .explore-divider {
-
-        margin-top: 14px;
-    }
-
-    .world-quote {
-
-        margin-top: 10px;
-
-        font-size: 25px;
-    }
-
-    .back-home {
-
-        margin-top: 10px;
-
-        font-size: 22px;
-    }
-}
-
-
-/* =====================================================
-   ТЕЛЕФОН
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .explore-page {
-        overflow-y: auto;
-    }
-
-    .explore-container {
-
-        min-height: auto;
-
-        padding:
-            65px
-            15px
-            35px;
-    }
-
-    .page-title {
-
-        font-size: 48px;
-    }
-
-    .explore-intro {
-
-        font-size: 25px;
-
         margin-top: 18px;
     }
 
-    .world-navigation {
-
-        flex-direction: column;
-
-        width: 100%;
-
-        gap: 10px;
-    }
-
-    .world-button {
-
-        width: 92%;
-
-        min-height: 48px;
-
-        font-size: 24px;
-    }
-
-    .explore-divider {
-
-        margin-top: 22px;
-    }
-
     .world-quote {
+        margin-top: 10px;
 
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .back-home {
-
         width: 92%;
 
-        font-size: 24px;
+        margin-top: 10px;
+
+        font-size: 21px;
     }
-}
 }
