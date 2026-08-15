@@ -4,23 +4,20 @@
 ===================================================== */
 
 
-/* =========================
+/* =====================================================
    БАЗА
-========================= */
+===================================================== */
 
 * {
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
-
     min-height: 100vh;
 
     background:
@@ -29,13 +26,11 @@ body {
             rgba(0, 255, 150, 0.12),
             transparent 30%
         ),
-
         radial-gradient(
             circle at 85% 55%,
             rgba(150, 50, 255, 0.16),
             transparent 35%
         ),
-
         #050816;
 
     color: #f2c95c;
@@ -44,12 +39,11 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    ФОНОВЫЕ СВЕЧЕНИЯ
-========================= */
+===================================================== */
 
 .glow-green {
-
     position: fixed;
 
     width: 420px;
@@ -73,7 +67,6 @@ body {
 
 
 .glow-purple {
-
     position: fixed;
 
     width: 470px;
@@ -96,9 +89,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    ЯЗЫКИ
-========================= */
+===================================================== */
 
 .language-switcher {
 
@@ -111,7 +104,7 @@ body {
 
     gap: 8px;
 
-    z-index: 100;
+    z-index: 1000;
 }
 
 
@@ -129,47 +122,72 @@ body {
     border-radius: 10px;
 
     background:
-        rgba(8, 7, 25, 0.78);
+        rgba(8, 7, 25, 0.9);
 
-    font-size: 21px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     cursor: pointer;
 
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease,
-        border-color 0.25s ease;
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* SVG-флажок */
+
+.flag-image {
+
+    width: 29px;
+    height: 20px;
+
+    display: block;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 0 5px
+        rgba(245, 212, 119, 0.3);
 }
 
 
 .language-button:hover {
 
-    transform: translateY(-2px);
+    transform:
+        translateY(-2px);
 
-    border-color: #f5d477;
+    border-color:
+        #f5d477;
 
     box-shadow:
         0 0 15px
-        rgba(168, 85, 247, 0.5);
+        rgba(168, 85, 247, 0.6);
 }
 
 
 .language-button.active {
 
-    border-color: #f5d477;
+    border-color:
+        #f5d477;
 
     background:
-        rgba(75, 40, 110, 0.55);
+        rgba(75, 40, 110, 0.7);
 
     box-shadow:
-        0 0 12px
-        rgba(245, 212, 119, 0.55);
+        0 0 15px
+        rgba(245, 212, 119, 0.65);
 }
 
 
-/* =========================
+/* =====================================================
    МАГИЧЕСКИЕ ТОЧКИ
-========================= */
+===================================================== */
 
 .magic-dot {
 
@@ -266,9 +284,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    ГЛАВНЫЙ ЗАГОЛОВОК
-========================= */
+===================================================== */
 
 .main-title {
 
@@ -325,9 +343,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    TRIXIOBSERVES
-========================= */
+===================================================== */
 
 .world-name {
 
@@ -342,6 +360,7 @@ body {
     font-style: italic;
 
     background:
+
         linear-gradient(
             90deg,
             #35f59a,
@@ -361,6 +380,8 @@ body {
 }
 
 
+/* Подчёркивание TrixiObserves */
+
 .world-name::after {
 
     content: "";
@@ -376,6 +397,7 @@ body {
     border-radius: 50%;
 
     background:
+
         linear-gradient(
             90deg,
             #39ff88,
@@ -424,12 +446,14 @@ body {
 
     0%,
     100% {
+
         transform:
             translateY(-7px)
             rotate(-2deg);
     }
 
     50% {
+
         transform:
             translateY(-12px)
             rotate(2deg);
@@ -437,7 +461,9 @@ body {
 }
 
 
-/* Тело */
+/* =====================================================
+   ТЕЛО МЫШКИ
+===================================================== */
 
 .bat-body {
 
@@ -450,6 +476,7 @@ body {
     top: 14px;
 
     background:
+
         linear-gradient(
             180deg,
             #4a302d,
@@ -462,7 +489,9 @@ body {
 }
 
 
-/* Голова */
+/* =====================================================
+   ГОЛОВА МЫШКИ
+===================================================== */
 
 .bat-head {
 
@@ -475,6 +504,7 @@ body {
     top: 5px;
 
     background:
+
         linear-gradient(
             180deg,
             #4b322f,
@@ -487,7 +517,9 @@ body {
 }
 
 
-/* Уши */
+/* =====================================================
+   УШИ
+===================================================== */
 
 .bat-ear {
 
@@ -499,6 +531,7 @@ body {
     top: -12px;
 
     background:
+
         linear-gradient(
             135deg,
             #3c2929,
@@ -534,7 +567,9 @@ body {
 }
 
 
-/* Глаза */
+/* =====================================================
+   ГЛАЗА
+===================================================== */
 
 .bat-eye {
 
@@ -548,6 +583,7 @@ body {
     border-radius: 50%;
 
     background:
+
         radial-gradient(
             circle at 45% 30%,
 
@@ -561,6 +597,7 @@ body {
         );
 
     box-shadow:
+
         0 0 7px
         rgba(90, 220, 255, 0.8);
 
@@ -580,7 +617,9 @@ body {
 }
 
 
-/* Нос */
+/* =====================================================
+   НОС
+===================================================== */
 
 .bat-nose {
 
@@ -600,7 +639,9 @@ body {
 }
 
 
-/* Крылья */
+/* =====================================================
+   КРЫЛЬЯ
+===================================================== */
 
 .bat-wing {
 
@@ -612,6 +653,7 @@ body {
     top: 14px;
 
     background:
+
         linear-gradient(
             135deg,
             #17131b,
@@ -676,6 +718,7 @@ body {
     margin-top: 20px;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
@@ -686,13 +729,14 @@ body {
         );
 
     box-shadow:
+
         0 0 10px
         rgba(168, 85, 247, 0.5);
 }
 
 
 /* =====================================================
-   ОПИСАНИЕ
+   ОПИСАНИЕ ГЛАВНОЙ
 ===================================================== */
 
 .home-description {
@@ -725,6 +769,7 @@ body {
         rotate(-1deg);
 
     text-shadow:
+
         0 0 7px
         rgba(244, 215, 123, 0.45);
 }
@@ -753,6 +798,7 @@ body {
     border-radius: 50px;
 
     background:
+
         linear-gradient(
             135deg,
             #35146d,
@@ -773,6 +819,7 @@ body {
     text-decoration: none;
 
     box-shadow:
+
         0 0 18px
         rgba(168, 85, 247, 0.45);
 
@@ -791,6 +838,7 @@ body {
         scale(1.03);
 
     box-shadow:
+
         0 0 30px
         rgba(168, 85, 247, 0.7);
 }
@@ -823,7 +871,9 @@ body {
 }
 
 
-/* Заголовок */
+/* =====================================================
+   ЗАГОЛОВОК EXPLORE
+===================================================== */
 
 .page-title {
 
@@ -852,11 +902,12 @@ body {
         rotate(-2deg);
 
     text-shadow:
+
         0 0 7px
-        rgba(255,225,130,0.6),
+        rgba(255, 225, 130, 0.6),
 
         0 0 18px
-        rgba(230,180,60,0.45);
+        rgba(230, 180, 60, 0.45);
 }
 
 
@@ -866,7 +917,9 @@ body {
 }
 
 
-/* Вступление */
+/* =====================================================
+   ВСТУПЛЕНИЕ EXPLORE
+===================================================== */
 
 .explore-intro {
 
@@ -954,8 +1007,9 @@ body {
     text-decoration: none;
 
     box-shadow:
+
         0 0 12px
-        rgba(168,85,247,0.18);
+        rgba(168, 85, 247, 0.18);
 
     transition: 0.3s;
 
@@ -976,8 +1030,9 @@ body {
         #f5d477;
 
     box-shadow:
+
         0 0 25px
-        rgba(168,85,247,0.45);
+        rgba(168, 85, 247, 0.45);
 }
 
 
@@ -1002,6 +1057,7 @@ body {
     margin-top: 35px;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
@@ -1011,12 +1067,15 @@ body {
         );
 
     box-shadow:
+
         0 0 10px
-        rgba(168,85,247,0.45);
+        rgba(168, 85, 247, 0.45);
 }
 
 
-/* Цитата */
+/* =====================================================
+   ЦИТАТА
+===================================================== */
 
 .world-quote {
 
@@ -1045,7 +1104,7 @@ body {
 
 
 /* =====================================================
-   КНОПКА ВОЗВРАТА В НАЧАЛО ПУТИ
+   КНОПКА ВОЗВРАТА
 ===================================================== */
 
 .back-home {
@@ -1080,6 +1139,7 @@ body {
     text-decoration: none;
 
     box-shadow:
+
         0 0 12px
         rgba(168, 85, 247, 0.22);
 
@@ -1106,12 +1166,15 @@ body {
         #f5d477;
 
     box-shadow:
+
         0 0 18px
         rgba(168, 85, 247, 0.55),
 
         0 0 30px
         rgba(57, 255, 136, 0.12);
 }
+
+
 /* =====================================================
    МОБИЛЬНАЯ ВЕРСИЯ
 ===================================================== */
@@ -1122,6 +1185,8 @@ body {
 
         top: 12px;
         right: 12px;
+
+        gap: 6px;
     }
 
 
@@ -1129,8 +1194,13 @@ body {
 
         width: 38px;
         height: 31px;
+    }
 
-        font-size: 19px;
+
+    .flag-image {
+
+        width: 25px;
+        height: 17px;
     }
 
 
@@ -1231,47 +1301,12 @@ body {
 
         width: 92%;
     }
-.language-button {
-    width: 44px;
-    height: 38px;
 
-    padding: 0;
 
-    border: 1px solid #d9aa35;
-    border-radius: 12px;
+    .back-home {
 
-    background: rgba(10, 8, 28, 0.9);
+        font-size: 25px;
 
-    font-size: 23px;
-    line-height: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 0 8px rgba(217, 170, 53, 0.35);
-
-    transition: 0.3s ease;
-}
-
-.language-button:hover {
-    transform: translateY(-2px);
-
-    border-color: #ffe9a6;
-
-    box-shadow:
-        0 0 15px rgba(245, 212, 119, 0.7);
-}
-
-.language-button.active {
-    border-color: #f5d477;
-
-    background: rgba(75, 40, 110, 0.75);
-
-    box-shadow:
-        0 0 15px rgba(245, 212, 119, 0.6);
-}
+        width: 92%;
+    }
 }
