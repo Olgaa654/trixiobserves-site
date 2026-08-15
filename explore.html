@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Мир TrixiObserves</title>
 
-    <!-- Рукописный шрифт -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
-          rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
 
@@ -28,385 +26,428 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-
             margin: 0;
 
             min-height: 100vh;
 
-            font-family: "Marck Script", cursive;
+            background:
+                radial-gradient(
+                    circle at 15% 50%,
+                    rgba(0, 255, 150, 0.10),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 50%,
+                    rgba(150, 50, 255, 0.14),
+                    transparent 35%
+                ),
+                #050816;
 
-            background: #050816;
+            color: #eac35d;
 
-            color: #e6b84a;
+            font-family:
+                "Cormorant Garamond",
+                serif;
 
-            overflow-x: hidden;
+            font-style: italic;
         }
 
-
-        /* Зелёное свечение */
+        /* =========================
+           СВЕЧЕНИЯ
+        ========================= */
 
         .glow-green {
-
             position: fixed;
 
             width: 400px;
             height: 400px;
 
-            background: #39ff88;
+            left: -100px;
+            top: 20%;
 
-            opacity: 0.10;
+            background: #20ff91;
+
+            opacity: 0.09;
 
             filter: blur(120px);
 
             border-radius: 50%;
 
-            top: 5%;
-            left: 5%;
-
             pointer-events: none;
         }
 
-
-        /* Сиреневое свечение */
-
         .glow-purple {
-
             position: fixed;
 
             width: 450px;
             height: 450px;
 
-            background: #a855f7;
+            right: -100px;
+            bottom: 5%;
 
-            opacity: 0.13;
+            background: #9b4dff;
+
+            opacity: 0.14;
 
             filter: blur(130px);
 
             border-radius: 50%;
 
-            bottom: 0;
-            right: 0;
-
             pointer-events: none;
         }
 
-
-        /* Основной контейнер */
+        /* =========================
+           ОСНОВНОЙ КОНТЕЙНЕР
+        ========================= */
 
         .page {
-
             position: relative;
 
-            z-index: 1;
+            z-index: 2;
 
             min-height: 100vh;
 
-            padding: 70px 30px;
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
 
             text-align: center;
+
+            padding:
+                55px
+                20px
+                45px;
         }
 
+        /* =========================
+           ЗАГОЛОВОК
+        ========================= */
 
-        /* Заголовок */
+        h1 {
+            margin: 0;
 
-        .title {
+            font-family:
+                "Allura",
+                cursive;
 
-            font-size: clamp(50px, 8vw, 90px);
+            font-size:
+                clamp(
+                    58px,
+                    8vw,
+                    95px
+                );
 
             font-weight: 400;
 
-            font-style: italic;
-
-            margin: 0;
+            line-height: 1;
 
             transform: rotate(-2deg);
 
-            color: #e6b84a;
+            color: #f0c85c;
 
             text-shadow:
-
-                0 2px 0 #8d6419,
-
-                0 0 10px rgba(230,184,74,0.7),
-
-                0 0 30px rgba(230,184,74,0.2);
+                0 0 7px rgba(255, 225, 130, 0.6),
+                0 0 18px rgba(230, 180, 60, 0.45);
         }
 
+        /* =========================
+           TrixiObserves
+        ========================= */
 
-        .subtitle {
+        .world-name {
+            display: inline-block;
 
-            max-width: 700px;
+            margin-left: 10px;
 
-            margin: 25px auto 55px;
+            background:
+                linear-gradient(
+                    90deg,
+                    #35f59a,
+                    #7ee7d7,
+                    #a6b4ff,
+                    #bd65ff
+                );
 
-            font-size: 29px;
+            -webkit-background-clip: text;
+            background-clip: text;
 
-            line-height: 1.5;
+            -webkit-text-fill-color: transparent;
 
-            font-style: italic;
-
-            color: #dcb45b;
+            position: relative;
 
             transform: rotate(-1deg);
 
             text-shadow:
-
-                0 0 8px rgba(220,180,91,0.5);
+                0 0 10px rgba(57, 255, 136, 0.2),
+                0 0 20px rgba(168, 85, 247, 0.2);
         }
 
+        /* Подчёркивание */
 
-        /* Меню */
+        .world-name::after {
+            content: "";
 
-        .menu {
+            display: block;
 
+            width: 100%;
+
+            height: 3px;
+
+            margin-top: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #39ff88,
+                    #8de6d1,
+                    #a855f7
+                );
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 0 8px #39ff88,
+                0 0 15px #a855f7;
+        }
+
+        /* =========================
+           ОПИСАНИЕ
+        ========================= */
+
+        .intro {
+            max-width: 800px;
+
+            margin-top: 25px;
+
+            font-size:
+                clamp(
+                    23px,
+                    3vw,
+                    32px
+                );
+
+            line-height: 1.35;
+
+            transform: rotate(-1deg);
+
+            text-shadow:
+                0 0 7px rgba(244, 215, 123, 0.4);
+        }
+
+        /* =========================
+           НАВИГАЦИЯ
+        ========================= */
+
+        .navigation {
             display: flex;
 
             justify-content: center;
 
-            align-items: stretch;
+            align-items: center;
+
+            flex-wrap: wrap;
 
             gap: 18px;
 
-            max-width: 1200px;
+            margin-top: 38px;
 
-            margin: 0 auto;
-
-            flex-wrap: wrap;
+            max-width: 1150px;
         }
 
-
-        /* Кнопки */
-
-        .menu-button {
-
+        .nav-button {
             display: flex;
 
             align-items: center;
 
             justify-content: center;
 
-            min-height: 75px;
+            min-height: 65px;
 
-            padding: 15px 25px;
+            padding:
+                12px
+                28px;
 
-            border: 1px solid rgba(230,184,74,0.7);
+            border:
+                1px solid
+                #d9aa35;
 
-            border-radius: 18px;
+            border-radius: 22px;
 
             background:
+                rgba(12, 10, 35, 0.75);
 
-                linear-gradient(
+            color: #eac35d;
 
-                    135deg,
+            font-family:
+                "Allura",
+                cursive;
 
-                    rgba(124,58,237,0.18),
+            font-size: 27px;
 
-                    rgba(5,8,22,0.75)
-
-                );
-
-            color: #e6b84a;
+            font-style: italic;
 
             text-decoration: none;
 
-            font-family: "Marck Script", cursive;
-
-            font-size: 24px;
-
-            font-style: italic;
+            box-shadow:
+                0 0 12px rgba(168, 85, 247, 0.18);
 
             transition: 0.3s;
 
-            box-shadow:
-
-                0 0 15px rgba(230,184,74,0.12);
+            transform: rotate(-1deg);
         }
 
-
-        /* Наведение */
-
-        .menu-button:hover {
-
+        .nav-button:hover {
             transform:
+                rotate(-1deg)
+                translateY(-4px);
 
-                translateY(-5px)
-
-                rotate(-1deg);
-
-            color: #ffe69a;
+            color: #ffe9a6;
 
             border-color: #f5d477;
 
+            box-shadow:
+                0 0 25px rgba(168, 85, 247, 0.45);
+        }
+
+        /* =========================
+           CARA
+        ========================= */
+
+        .cara-button {
+            margin-top: 22px;
+
+            min-width: 300px;
+        }
+
+        /* =========================
+           РАЗДЕЛИТЕЛЬ
+        ========================= */
+
+        .divider {
+            width: 220px;
+
+            height: 2px;
+
+            margin-top: 38px;
+
             background:
-
                 linear-gradient(
-
-                    135deg,
-
-                    rgba(168,85,247,0.35),
-
-                    rgba(57,255,136,0.08)
-
+                    90deg,
+                    transparent,
+                    #a855f7,
+                    #f5d477,
+                    transparent
                 );
 
             box-shadow:
-
-                0 0 20px rgba(230,184,74,0.35),
-
-                0 0 35px rgba(168,85,247,0.2);
+                0 0 10px rgba(168, 85, 247, 0.45);
         }
 
-
-        /* Разделитель */
-
-        .divider {
-
-            width: 180px;
-
-            height: 1px;
-
-            margin: 60px auto 35px;
-
-            background:
-
-                linear-gradient(
-
-                    90deg,
-
-                    transparent,
-
-                    #e6b84a,
-
-                    transparent
-
-                );
-
-            opacity: 0.6;
-        }
-
+        /* =========================
+           ЦИТАТА
+        ========================= */
 
         .quote {
+            max-width: 800px;
 
-            max-width: 650px;
+            margin-top: 25px;
 
-            margin: auto;
+            font-size:
+                clamp(
+                    23px,
+                    3vw,
+                    32px
+                );
 
-            font-size: 26px;
+            line-height: 1.3;
 
-            line-height: 1.6;
+            color: #dcb65b;
 
-            font-style: italic;
+            transform: rotate(-1deg);
 
-            color: #bfa66a;
-
+            text-shadow:
+                0 0 8px rgba(244, 215, 123, 0.35);
         }
 
-
-        /* Точки */
-
-        .dot {
-
-            position: fixed;
-
-            width: 7px;
-
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: #39ff88;
-
-            box-shadow: 0 0 15px #39ff88;
-
-        }
-
-
-        .dot1 {
-
-            top: 18%;
-
-            right: 10%;
-        }
-
-
-        .dot2 {
-
-            bottom: 15%;
-
-            left: 12%;
-
-            background: #a855f7;
-
-            box-shadow: 0 0 15px #a855f7;
-        }
-
-
-        /* Телефон */
+        /* =========================
+           МОБИЛЬНАЯ ВЕРСИЯ
+        ========================= */
 
         @media (max-width: 700px) {
 
             .page {
-
-                padding: 50px 20px;
+                padding:
+                    35px
+                    15px
+                    40px;
             }
 
-            .title {
-
-                font-size: 55px;
+            h1 {
+                font-size: 57px;
             }
 
-            .subtitle {
+            .world-name {
+                display: block;
 
+                margin-left: 0;
+
+                margin-top: 5px;
+            }
+
+            .intro {
                 font-size: 25px;
             }
 
-            .menu {
-
+            .navigation {
                 flex-direction: column;
 
-                max-width: 500px;
+                width: 100%;
             }
 
-            .menu-button {
+            .nav-button {
+                width: 90%;
 
-                width: 100%;
+                font-size: 27px;
+            }
 
+            .cara-button {
+                width: 90%;
+            }
+
+            .quote {
                 font-size: 25px;
             }
-
         }
 
     </style>
 
 </head>
 
-
 <body>
 
-
     <div class="glow-green"></div>
-
     <div class="glow-purple"></div>
-
-
-    <div class="dot dot1"></div>
-
-    <div class="dot dot2"></div>
-
 
     <main class="page">
 
+        <h1>
 
-        <h1 class="title">
+            Мир
 
-            Мир TrixiObserves
+            <span class="world-name">
+                TrixiObserves
+            </span>
 
         </h1>
 
-
-        <p class="subtitle">
+        <p class="intro">
 
             Здесь начинаются путешествия,
             открываются забытые истории
@@ -414,57 +455,48 @@
 
         </p>
 
+        <nav class="navigation">
 
-        <nav class="menu">
-
-
-            <a href="about.html"
-               class="menu-button">
-
+            <a
+                href="#about"
+                class="nav-button"
+            >
                 О мире TrixiObserves
-
             </a>
 
-
-            <a href="diary.html"
-               class="menu-button">
-
+            <a
+                href="#diary"
+                class="nav-button"
+            >
                 Путевой Дневник Трикси
-
             </a>
 
-
-            <a href="gallery.html"
-               class="menu-button">
-
+            <a
+                href="#gallery"
+                class="nav-button"
+            >
                 Галерея
-
             </a>
 
-
-            <a href="sketches.html"
-               class="menu-button">
-
+            <a
+                href="#sketches"
+                class="nav-button"
+            >
                 Зарисовки из путешествий
-
             </a>
-
-
-            <a href="https://cara.app/trixiobserves"
-               class="menu-button"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                🎨 Галерея на Cara ↗
-
-            </a>
-
 
         </nav>
 
+        <a
+            href="https://cara.app/trixiobserves"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-button cara-button"
+        >
+            🎨 Галерея на Cara ↗
+        </a>
 
         <div class="divider"></div>
-
 
         <p class="quote">
 
@@ -473,10 +505,7 @@
 
         </p>
 
-
     </main>
 
-
 </body>
-
 </html>
