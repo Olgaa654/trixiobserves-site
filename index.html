@@ -6,6 +6,11 @@
 
     <title>TrixiObserves</title>
 
+    <!-- Рукописный шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
@@ -14,33 +19,43 @@
         body {
             margin: 0;
             min-height: 100vh;
-            font-family: Arial, sans-serif;
+
+            /* Рукописный шрифт */
+            font-family: "Marck Script", cursive;
+
             background: #050816;
-            color: white;
+            color: #d8a93a;
             overflow: hidden;
         }
 
-        /* Светящиеся элементы на фоне */
+        /* Светящееся зелёное свечение */
         .glow-green {
             position: absolute;
             width: 350px;
             height: 350px;
+
             background: #39ff88;
             opacity: 0.12;
+
             filter: blur(100px);
             border-radius: 50%;
+
             top: 10%;
             left: 5%;
         }
 
+        /* Светящееся сиреневое свечение */
         .glow-purple {
             position: absolute;
             width: 400px;
             height: 400px;
+
             background: #a855f7;
             opacity: 0.15;
+
             filter: blur(110px);
             border-radius: 50%;
+
             bottom: 5%;
             right: 5%;
         }
@@ -49,6 +64,7 @@
         .hero {
             position: relative;
             z-index: 1;
+
             min-height: 100vh;
 
             display: flex;
@@ -60,77 +76,138 @@
             padding: 30px;
         }
 
+        /* Название */
         .small-title {
-            color: #39ff88;
-            font-size: 18px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
+            color: #e6b84a;
+
+            font-size: 28px;
+            letter-spacing: 3px;
+
+            margin-bottom: 25px;
+
+            font-style: italic;
+
+            transform: rotate(-2deg);
+
+            text-shadow:
+                0 0 8px rgba(230, 184, 74, 0.6),
+                0 0 20px rgba(230, 184, 74, 0.25);
         }
 
+        /* Главный заголовок */
         h1 {
-            font-size: clamp(42px, 7vw, 80px);
+            font-family: "Marck Script", cursive;
+
+            font-size: clamp(50px, 8vw, 92px);
+
+            line-height: 1.05;
+
             margin: 0;
 
-            background: linear-gradient(
-                90deg,
-                #ffffff,
-                #c084fc,
-                #39ff88
-            );
+            font-weight: 400;
+            font-style: italic;
 
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #e6b84a;
+
+            transform: rotate(-2deg);
+
+            text-shadow:
+                0 2px 0 #9a6d19,
+                0 0 8px rgba(230, 184, 74, 0.7),
+                0 0 25px rgba(230, 184, 74, 0.25);
         }
 
+        /* Текст под заголовком */
         .description {
-            max-width: 650px;
-            font-size: 20px;
-            line-height: 1.6;
-            color: #b8bfd6;
-            margin-top: 25px;
+            max-width: 750px;
+
+            margin-top: 35px;
+
+            font-family: "Marck Script", cursive;
+
+            font-size: clamp(25px, 3vw, 34px);
+
+            line-height: 1.45;
+
+            color: #dcb45b;
+
+            font-style: italic;
+
+            transform: rotate(-1.5deg);
+
+            text-shadow:
+                0 0 8px rgba(220, 180, 91, 0.5),
+                0 0 18px rgba(220, 180, 91, 0.2);
         }
 
         /* Кнопка */
         .explore-button {
-            margin-top: 35px;
-            padding: 16px 32px;
+            margin-top: 40px;
 
-            border: 2px solid #a855f7;
+            padding: 15px 34px;
+
+            border: 1px solid #d8a93a;
             border-radius: 40px;
 
-            background: linear-gradient(
-                135deg,
-                #7c3aed,
-                #a855f7
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(124, 58, 237, 0.8),
+                    rgba(88, 28, 135, 0.85)
+                );
 
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
+            color: #f0c85b;
+
+            font-family: "Marck Script", cursive;
+
+            font-size: 25px;
+            font-weight: 400;
+
+            font-style: italic;
 
             cursor: pointer;
+
             transition: 0.3s;
 
+            transform: rotate(-1deg);
+
             box-shadow:
-                0 0 20px rgba(168, 85, 247, 0.4);
+                0 0 15px rgba(216, 169, 58, 0.35),
+                0 0 25px rgba(168, 85, 247, 0.3);
+
+            text-shadow:
+                0 0 7px rgba(240, 200, 91, 0.5);
         }
 
+        /* Эффект при наведении */
         .explore-button:hover {
-            transform: translateY(-4px) scale(1.03);
+            transform:
+                rotate(-1deg)
+                translateY(-4px)
+                scale(1.04);
+
+            border-color: #f5d477;
+
+            color: #ffe59a;
 
             box-shadow:
-                0 0 35px rgba(57, 255, 136, 0.5);
+                0 0 20px rgba(216, 169, 58, 0.65),
+                0 0 40px rgba(57, 255, 136, 0.25);
         }
 
         /* Декоративные точки */
         .dot {
             position: absolute;
+
             width: 8px;
             height: 8px;
+
             border-radius: 50%;
+
             background: #39ff88;
-            box-shadow: 0 0 15px #39ff88;
+
+            box-shadow:
+                0 0 15px #39ff88;
         }
 
         .dot1 {
@@ -141,13 +218,42 @@
         .dot2 {
             bottom: 20%;
             left: 15%;
+
             background: #a855f7;
-            box-shadow: 0 0 15px #a855f7;
+
+            box-shadow:
+                0 0 15px #a855f7;
         }
 
         .dot3 {
             top: 35%;
             left: 10%;
+        }
+
+        /* Чтобы на телефоне всё выглядело аккуратно */
+        @media (max-width: 600px) {
+
+            .hero {
+                padding: 20px;
+            }
+
+            .small-title {
+                font-size: 23px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .description {
+                font-size: 25px;
+                max-width: 90%;
+            }
+
+            .explore-button {
+                font-size: 23px;
+                padding: 13px 25px;
+            }
         }
     </style>
 </head>
@@ -173,7 +279,8 @@
         </h1>
 
         <p class="description">
-    Исследуй забытые мифы. Найди в них ответы и путь к себе.
+            Исследуй забытые мифы.
+            Найди в них ответы и путь к себе.
         </p>
 
         <button class="explore-button" onclick="startExploring()">
