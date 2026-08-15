@@ -1231,5 +1231,47 @@ body {
 
         width: 92%;
     }
+.language-button {
+    width: 44px;
+    height: 38px;
 
+    padding: 0;
+
+    border: 1px solid #d9aa35;
+    border-radius: 12px;
+
+    background: rgba(10, 8, 28, 0.9);
+
+    font-size: 23px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(217, 170, 53, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.language-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #ffe9a6;
+
+    box-shadow:
+        0 0 15px rgba(245, 212, 119, 0.7);
+}
+
+.language-button.active {
+    border-color: #f5d477;
+
+    background: rgba(75, 40, 110, 0.75);
+
+    box-shadow:
+        0 0 15px rgba(245, 212, 119, 0.6);
+}
 }
