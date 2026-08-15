@@ -1317,30 +1317,254 @@ body {
    EXPLORE — ВСЯ СТРАНИЦА В ОДИН ЭКРАН
 ===================================================== */
 
+/* =====================================================
+   КОМПАКТНЫЕ СТРАНИЦЫ
+   БЕЗ ВЕРТИКАЛЬНОЙ ПРОКРУТКИ НА ПК
+===================================================== */
+
 .explore-page {
     overflow: hidden;
 }
 
-
 .explore-container {
-
-    min-height: 100vh;
+    width: 100%;
     height: 100vh;
+    min-height: 100vh;
 
-    padding:
-        28px
-        20px
-        18px;
+    padding: 22px 20px 12px;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 
-    justify-content: flex-start;
+    overflow: hidden;
 }
 
+
+/* =====================================================
+   ЗАГОЛОВОК
+===================================================== */
+
+.page-title {
+    margin: 0;
+
+    font-size: clamp(42px, 4.5vw, 60px);
+
+    line-height: 0.9;
+
+    text-align: center;
+}
+
+.page-title .world-name {
+    margin-left: 7px;
+}
+
+
+/* =====================================================
+   ВСТУПЛЕНИЕ
+===================================================== */
+
+.explore-intro {
+    max-width: 680px;
+
+    margin: 12px auto 0;
+
+    font-size: clamp(18px, 1.9vw, 24px);
+
+    line-height: 1.12;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   КНОПКИ
+===================================================== */
+
+.world-navigation {
+    max-width: 1050px;
+
+    margin-top: 16px;
+
+    gap: 8px;
+}
+
+.world-button {
+    min-height: 42px;
+
+    padding: 6px 17px;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    border-radius: 16px;
+}
+
+.cara-button {
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   РАЗДЕЛИТЕЛЬ
+===================================================== */
+
+.explore-divider {
+    width: 170px;
+
+    height: 2px;
+
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   ЦИТАТА
+===================================================== */
+
+.world-quote {
+    max-width: 680px;
+
+    margin: 8px auto 0;
+
+    font-size: clamp(18px, 1.9vw, 24px);
+
+    line-height: 1.08;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   КНОПКА НАЗАД
+===================================================== */
+
+.back-home {
+    margin-top: 8px;
+
+    padding: 7px 22px;
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   НИЗКИЕ ЭКРАНЫ
+===================================================== */
+
+@media (max-height: 850px) and (min-width: 701px) {
+
+    .explore-container {
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
+
+    .page-title {
+        font-size: 50px;
+    }
+
+    .explore-intro {
+        margin-top: 8px;
+        font-size: 21px;
+    }
+
+    .world-navigation {
+        margin-top: 12px;
+        gap: 6px;
+    }
+
+    .world-button {
+        min-height: 38px;
+        padding: 5px 15px;
+        font-size: 17px;
+    }
+
+    .explore-divider {
+        margin-top: 9px;
+    }
+
+    .world-quote {
+        margin-top: 6px;
+        font-size: 20px;
+    }
+
+    .back-home {
+        margin-top: 6px;
+        padding: 6px 20px;
+        font-size: 18px;
+    }
+}
+
+
+/* =====================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .explore-page {
+        overflow-y: auto;
+    }
+
+    .explore-container {
+        height: auto;
+        min-height: 100vh;
+
+        padding: 65px 15px 30px;
+    }
+
+    .page-title {
+        font-size: 43px;
+        line-height: 0.95;
+    }
+
+    .page-title .world-name {
+        display: block;
+        margin: 4px 0 0;
+    }
+
+    .explore-intro {
+        margin-top: 14px;
+        font-size: 23px;
+        line-height: 1.15;
+    }
+
+    .world-navigation {
+        flex-direction: column;
+
+        width: 100%;
+
+        margin-top: 18px;
+
+        gap: 9px;
+    }
+
+    .world-button {
+        width: 92%;
+
+        min-height: 46px;
+
+        font-size: 21px;
+    }
+
+    .explore-divider {
+        margin-top: 18px;
+    }
+
+    .world-quote {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    .back-home {
+        width: 92%;
+        margin-top: 10px;
+        font-size: 21px;
+    }
+}
 
 /* =====================================================
    ЗАГОЛОВОК
