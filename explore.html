@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
     <meta charset="UTF-8">
@@ -9,437 +10,73 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Мир TrixiObserves</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>TrixiObserves — Мир</title>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
         rel="stylesheet"
+        href="style.css"
     >
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-
-            min-height: 100vh;
-
-            background:
-                radial-gradient(
-                    circle at 15% 50%,
-                    rgba(0, 255, 150, 0.10),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 85% 50%,
-                    rgba(150, 50, 255, 0.14),
-                    transparent 35%
-                ),
-                #050816;
-
-            color: #eac35d;
-
-            font-family:
-                "Cormorant Garamond",
-                serif;
-
-            font-style: italic;
-        }
-
-        /* =========================
-           СВЕЧЕНИЯ
-        ========================= */
-
-        .glow-green {
-            position: fixed;
-
-            width: 400px;
-            height: 400px;
-
-            left: -100px;
-            top: 20%;
-
-            background: #20ff91;
-
-            opacity: 0.09;
-
-            filter: blur(120px);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        .glow-purple {
-            position: fixed;
-
-            width: 450px;
-            height: 450px;
-
-            right: -100px;
-            bottom: 5%;
-
-            background: #9b4dff;
-
-            opacity: 0.14;
-
-            filter: blur(130px);
-
-            border-radius: 50%;
-
-            pointer-events: none;
-        }
-
-        /* =========================
-           ОСНОВНОЙ КОНТЕЙНЕР
-        ========================= */
-
-        .page {
-            position: relative;
-
-            z-index: 2;
-
-            min-height: 100vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: center;
-
-            text-align: center;
-
-            padding:
-                55px
-                20px
-                45px;
-        }
-
-        /* =========================
-           ЗАГОЛОВОК
-        ========================= */
-
-        h1 {
-            margin: 0;
-
-            font-family:
-                "Allura",
-                cursive;
-
-            font-size:
-                clamp(
-                    58px,
-                    8vw,
-                    95px
-                );
-
-            font-weight: 400;
-
-            line-height: 1;
-
-            transform: rotate(-2deg);
-
-            color: #f0c85c;
-
-            text-shadow:
-                0 0 7px rgba(255, 225, 130, 0.6),
-                0 0 18px rgba(230, 180, 60, 0.45);
-        }
-
-        /* =========================
-           TrixiObserves
-        ========================= */
-
-        .world-name {
-            display: inline-block;
-
-            margin-left: 10px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #35f59a,
-                    #7ee7d7,
-                    #a6b4ff,
-                    #bd65ff
-                );
-
-            -webkit-background-clip: text;
-            background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-
-            position: relative;
-
-            transform: rotate(-1deg);
-
-            text-shadow:
-                0 0 10px rgba(57, 255, 136, 0.2),
-                0 0 20px rgba(168, 85, 247, 0.2);
-        }
-
-        /* Подчёркивание */
-
-        .world-name::after {
-            content: "";
-
-            display: block;
-
-            width: 100%;
-
-            height: 3px;
-
-            margin-top: 3px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #39ff88,
-                    #8de6d1,
-                    #a855f7
-                );
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 8px #39ff88,
-                0 0 15px #a855f7;
-        }
-
-        /* =========================
-           ОПИСАНИЕ
-        ========================= */
-
-        .intro {
-            max-width: 800px;
-
-            margin-top: 25px;
-
-            font-size:
-                clamp(
-                    23px,
-                    3vw,
-                    32px
-                );
-
-            line-height: 1.35;
-
-            transform: rotate(-1deg);
-
-            text-shadow:
-                0 0 7px rgba(244, 215, 123, 0.4);
-        }
-
-        /* =========================
-           НАВИГАЦИЯ
-        ========================= */
-
-        .navigation {
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            flex-wrap: wrap;
-
-            gap: 18px;
-
-            margin-top: 38px;
-
-            max-width: 1150px;
-        }
-
-        .nav-button {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 65px;
-
-            padding:
-                12px
-                28px;
-
-            border:
-                1px solid
-                #d9aa35;
-
-            border-radius: 22px;
-
-            background:
-                rgba(12, 10, 35, 0.75);
-
-            color: #eac35d;
-
-            font-family:
-                "Allura",
-                cursive;
-
-            font-size: 27px;
-
-            font-style: italic;
-
-            text-decoration: none;
-
-            box-shadow:
-                0 0 12px rgba(168, 85, 247, 0.18);
-
-            transition: 0.3s;
-
-            transform: rotate(-1deg);
-        }
-
-        .nav-button:hover {
-            transform:
-                rotate(-1deg)
-                translateY(-4px);
-
-            color: #ffe9a6;
-
-            border-color: #f5d477;
-
-            box-shadow:
-                0 0 25px rgba(168, 85, 247, 0.45);
-        }
-
-        /* =========================
-           CARA
-        ========================= */
-
-        .cara-button {
-            margin-top: 22px;
-
-            min-width: 300px;
-        }
-
-        /* =========================
-           РАЗДЕЛИТЕЛЬ
-        ========================= */
-
-        .divider {
-            width: 220px;
-
-            height: 2px;
-
-            margin-top: 38px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #a855f7,
-                    #f5d477,
-                    transparent
-                );
-
-            box-shadow:
-                0 0 10px rgba(168, 85, 247, 0.45);
-        }
-
-        /* =========================
-           ЦИТАТА
-        ========================= */
-
-        .quote {
-            max-width: 800px;
-
-            margin-top: 25px;
-
-            font-size:
-                clamp(
-                    23px,
-                    3vw,
-                    32px
-                );
-
-            line-height: 1.3;
-
-            color: #dcb65b;
-
-            transform: rotate(-1deg);
-
-            text-shadow:
-                0 0 8px rgba(244, 215, 123, 0.35);
-        }
-
-        /* =========================
-           МОБИЛЬНАЯ ВЕРСИЯ
-        ========================= */
-
-        @media (max-width: 700px) {
-
-            .page {
-                padding:
-                    35px
-                    15px
-                    40px;
-            }
-
-            h1 {
-                font-size: 57px;
-            }
-
-            .world-name {
-                display: block;
-
-                margin-left: 0;
-
-                margin-top: 5px;
-            }
-
-            .intro {
-                font-size: 25px;
-            }
-
-            .navigation {
-                flex-direction: column;
-
-                width: 100%;
-            }
-
-            .nav-button {
-                width: 90%;
-
-                font-size: 27px;
-            }
-
-            .cara-button {
-                width: 90%;
-            }
-
-            .quote {
-                font-size: 25px;
-            }
-        }
-
-    </style>
 
 </head>
 
-<body>
+
+<body class="explore-page">
+
+
+    <!-- =========================
+         ЯЗЫКИ
+    ========================== -->
+
+    <div class="language-switcher">
+
+        <button
+            class="language-button"
+            data-language="ru"
+            onclick="changeLanguage('ru')"
+        >
+            🇷🇺
+        </button>
+
+        <button
+            class="language-button"
+            data-language="de"
+            onclick="changeLanguage('de')"
+        >
+            🇩🇪
+        </button>
+
+        <button
+            class="language-button"
+            data-language="en"
+            onclick="changeLanguage('en')"
+        >
+            🇬🇧
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         СВЕЧЕНИЯ
+    ========================== -->
 
     <div class="glow-green"></div>
+
     <div class="glow-purple"></div>
 
-    <main class="page">
 
-        <h1>
+    <main class="explore-container">
 
-            Мир
+
+        <!-- =========================
+             ЗАГОЛОВОК
+        ========================== -->
+
+        <h1 class="page-title">
+
+            <span data-i18n="world">
+                Мир
+            </span>
 
             <span class="world-name">
                 TrixiObserves
@@ -447,65 +84,115 @@
 
         </h1>
 
-        <p class="intro">
 
+        <!-- =========================
+             ВСТУПЛЕНИЕ
+        ========================== -->
+
+        <p
+            class="explore-intro"
+            data-i18n="exploreIntro"
+        >
             Здесь начинаются путешествия,
             открываются забытые истории
             и оживают старые мифы.
-
         </p>
 
-        <nav class="navigation">
+
+        <!-- =========================
+             НАВИГАЦИЯ
+        ========================== -->
+
+        <nav class="world-navigation">
+
 
             <a
-                href="#about"
-                class="nav-button"
+                href="explore.html"
+                class="world-button"
+                data-i18n="aboutWorld"
             >
                 О мире TrixiObserves
             </a>
 
+
             <a
-                href="#diary"
-                class="nav-button"
+                href="diary.html"
+                class="world-button"
+                data-i18n="diary"
             >
                 Путевой Дневник Трикси
             </a>
 
+
             <a
-                href="#gallery"
-                class="nav-button"
+                href="gallery.html"
+                class="world-button"
+                data-i18n="gallery"
             >
                 Галерея
             </a>
 
+
             <a
-                href="#sketches"
-                class="nav-button"
+                href="sketches.html"
+                class="world-button"
+                data-i18n="sketches"
             >
                 Зарисовки из путешествий
             </a>
 
+
+            <a
+                href="https://cara.app/trixiobserves"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="world-button cara-button"
+                data-i18n="cara"
+            >
+                🎨 Галерея на Cara ↗
+            </a>
+
         </nav>
 
-        <a
-            href="https://cara.app/trixiobserves"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="nav-button cara-button"
+
+        <!-- =========================
+             РАЗДЕЛИТЕЛЬ
+        ========================== -->
+
+        <div class="explore-divider"></div>
+
+
+        <!-- =========================
+             ЦИТАТА
+        ========================== -->
+
+        <p
+            class="world-quote"
+            data-i18n="quote"
         >
-            🎨 Галерея на Cara ↗
-        </a>
-
-        <div class="divider"></div>
-
-        <p class="quote">
-
             «У каждой истории есть след.
             Нужно лишь знать, где искать.»
-
         </p>
+
+
+        <!-- Назад -->
+
+        <a
+            href="index.html"
+            class="back-button"
+            data-i18n="backHome"
+        >
+            ← На главную
+        </a>
+
 
     </main>
 
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
