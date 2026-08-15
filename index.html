@@ -19,43 +19,34 @@
         body {
             margin: 0;
             min-height: 100vh;
-
-            /* Рукописный шрифт */
             font-family: "Marck Script", cursive;
-
             background: #050816;
             color: #d8a93a;
             overflow: hidden;
         }
 
-        /* Светящееся зелёное свечение */
+        /* Зелёное свечение */
         .glow-green {
             position: absolute;
             width: 350px;
             height: 350px;
-
             background: #39ff88;
             opacity: 0.12;
-
             filter: blur(100px);
             border-radius: 50%;
-
             top: 10%;
             left: 5%;
         }
 
-        /* Светящееся сиреневое свечение */
+        /* Сиреневое свечение */
         .glow-purple {
             position: absolute;
             width: 400px;
             height: 400px;
-
             background: #a855f7;
             opacity: 0.15;
-
             filter: blur(110px);
             border-radius: 50%;
-
             bottom: 5%;
             right: 5%;
         }
@@ -86,7 +77,6 @@
             margin-bottom: 25px;
 
             font-style: italic;
-
             transform: rotate(-2deg);
 
             text-shadow:
@@ -142,7 +132,9 @@
 
         /* Кнопка */
         .explore-button {
-            margin-top: 40px;
+            display: inline-block;
+
+            margin-top: 20px;
 
             padding: 15px 34px;
 
@@ -162,14 +154,16 @@
 
             font-size: 25px;
             font-weight: 400;
-
             font-style: italic;
+
+            text-decoration: none;
 
             cursor: pointer;
 
             transition: 0.3s;
 
-            transform: rotate(-1deg);
+            /* Поднимаем кнопку */
+            transform: translateY(-55px) rotate(-1deg);
 
             box-shadow:
                 0 0 15px rgba(216, 169, 58, 0.35),
@@ -182,8 +176,8 @@
         /* Эффект при наведении */
         .explore-button:hover {
             transform:
+                translateY(-60px)
                 rotate(-1deg)
-                translateY(-4px)
                 scale(1.04);
 
             border-color: #f5d477;
@@ -230,7 +224,7 @@
             left: 10%;
         }
 
-        /* Чтобы на телефоне всё выглядело аккуратно */
+        /* Телефон */
         @media (max-width: 600px) {
 
             .hero {
@@ -253,6 +247,15 @@
             .explore-button {
                 font-size: 23px;
                 padding: 13px 25px;
+
+                transform: translateY(-35px) rotate(-1deg);
+            }
+
+            .explore-button:hover {
+                transform:
+                    translateY(-40px)
+                    rotate(-1deg)
+                    scale(1.04);
             }
         }
     </style>
@@ -284,7 +287,7 @@
         </p>
 
         <a href="explore.html" class="explore-button">
-           Начать путешествие ✦
+            Начать путешествие ✦
         </a>
 
     </main>
